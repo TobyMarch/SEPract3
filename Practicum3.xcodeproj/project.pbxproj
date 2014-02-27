@@ -21,6 +21,7 @@
 		F20786F518BF87AA00664ABB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20786D718BF87AA00664ABB /* UIKit.framework */; };
 		F20786FD18BF87AA00664ABB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F20786FB18BF87AA00664ABB /* InfoPlist.strings */; };
 		F20786FF18BF87AA00664ABB /* Practicum3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F20786FE18BF87AA00664ABB /* Practicum3Tests.m */; };
+		F207870A18BF8DE600664ABB /* SEListSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = F207870918BF8DE600664ABB /* SEListSingleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		F20786FA18BF87AA00664ABB /* Practicum3Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Practicum3Tests-Info.plist"; sourceTree = "<group>"; };
 		F20786FC18BF87AA00664ABB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F20786FE18BF87AA00664ABB /* Practicum3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Practicum3Tests.m; sourceTree = "<group>"; };
+		F207870818BF8DE600664ABB /* SEListSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEListSingleton.h; sourceTree = "<group>"; };
+		F207870918BF8DE600664ABB /* SEListSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEListSingleton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 		F20786D918BF87AA00664ABB /* Practicum3 */ = {
 			isa = PBXGroup;
 			children = (
+				F207870818BF8DE600664ABB /* SEListSingleton.h */,
+				F207870918BF8DE600664ABB /* SEListSingleton.m */,
 				F20786E218BF87AA00664ABB /* SEAppDelegate.h */,
 				F20786E318BF87AA00664ABB /* SEAppDelegate.m */,
 				F20786E518BF87AA00664ABB /* Main.storyboard */,
@@ -253,6 +258,7 @@
 				F20786E418BF87AA00664ABB /* SEAppDelegate.m in Sources */,
 				F20786EA18BF87AA00664ABB /* SEViewController.m in Sources */,
 				F20786E018BF87AA00664ABB /* main.m in Sources */,
+				F207870A18BF8DE600664ABB /* SEListSingleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
