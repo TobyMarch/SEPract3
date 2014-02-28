@@ -37,7 +37,7 @@
     [self setTitle:[NSString stringWithFormat:@"%@ %@", [theProf firstName], [theProf lastName]]];
     [idLabel setText:[NSString stringWithFormat:@"ID: %d", [theProf ID]]];
     [departmentLabel setText:[NSString stringWithFormat:@"Dept: %@",[theProf department]]];
-    [salaryLabel setText:[NSString stringWithFormat:@"Salary: %.2f", [theProf salary]]];
+    [salaryLabel setText:[NSString stringWithFormat:@"Salary: $%.0f", [theProf salary]]];
     NSString *tenureStatus;
     if ([theProf tenure]){
          tenureStatus = @"Tenuerd";

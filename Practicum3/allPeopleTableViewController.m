@@ -108,7 +108,11 @@
         
         [self.navigationController pushViewController:detail animated:YES];
     } else {
+        ProfessorDetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfessorDetail"];
+        NSString *title = [NSString stringWithFormat:@"%d", [[[list list] objectAtIndex:indexPath.row] ID]];
+        detail.title = title;
         
+        [self.navigationController pushViewController:detail animated:YES];
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

@@ -30,6 +30,9 @@
     PersonList *newList = [[PersonList alloc] init];
     Student *newPerson = [Student alloc];
     newPerson = [newPerson initWithfName:@"Calvin" andlName:@"Chestnut" andID:701136956];
+    [newPerson setMajor:@"English"];
+    [newPerson setGpa:3.4];
+    [newPerson setGradYear:2014];
     [[newList list] insertObject:newPerson atIndex:0];
     
     Student *secondPerson = [Student alloc];
@@ -38,6 +41,12 @@
     [secondPerson setGradYear:2014];
     [secondPerson setMajor:@"Computer Science"];
     [[newList list] insertObject:secondPerson atIndex:0];
+    
+    Professor *thirdPerson = [Professor alloc];
+    thirdPerson = [thirdPerson initWithFirstName:@"John" andLastName:@"Barr" andID:234567890 andTenured:NO];
+    [thirdPerson setSalary:20000];
+    [thirdPerson setDepartment:@"Computer Science"];
+    [[newList list] insertObject:thirdPerson atIndex:0];
     
     /*
     [[newList list] insertObject:[[Person alloc] initWithfName:@"Toby" andlName:@"March" andID:123456789] atIndex:0];

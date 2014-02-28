@@ -35,10 +35,10 @@
     
     
     if (self = [super init]) {
-        firstName = @"";
-        lastName = @"";
-        ID = 0;
-        tenure = false;
+        firstName = firstNameIn;
+        lastName = lastNameIn;
+        ID = IDin;
+        tenure = tenuredIn;
         return (self);
     }
     return nil;
