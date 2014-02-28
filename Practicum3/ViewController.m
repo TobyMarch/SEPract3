@@ -39,6 +39,14 @@
     [secondPerson setMajor:@"Computer Science"];
     [[newList list] insertObject:secondPerson atIndex:0];
     
+    Professor *thirdPerson = [Professor alloc];
+    thirdPerson = [thirdPerson initWithFirstName:@"John" andLastName:@"Barr" andID:4000000001 andTenured:YES];
+    [thirdPerson setSalary:10000.0];
+    [thirdPerson setDepartment:@"Computer Science"];
+    [[newList list] insertObject:thirdPerson atIndex:0];
+    
+    
+    
     /*
     [[newList list] insertObject:[[Person alloc] initWithfName:@"Toby" andlName:@"March" andID:123456789] atIndex:0];
     [[newList list] insertObject:[[Person alloc] initWithfName:@"Chris" andlName:@"Kindrat" andID:987654321] atIndex:0];
