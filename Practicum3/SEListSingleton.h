@@ -6,16 +6,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "List.h"
+#import "PersonList.h"
 
 @interface SEListSingleton : NSObject {
-	List *personList;
+	PersonList *personList;
 }
 
 +(SEListSingleton *) sharedList;
 
--(void)setList:(List *) listIn;
+-(void)setList:(PersonList *) listIn;
 
--(List *)getList; 
+-(PersonList *)getList;
 
 @end

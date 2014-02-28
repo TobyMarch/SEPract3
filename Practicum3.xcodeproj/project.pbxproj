@@ -8,12 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3E38B6DE18C03A6F00CB5946 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E38B6DD18C03A6F00CB5946 /* List.m */; };
-		3E38B6E918C03A9300CB5946 /* addPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E38B6E018C03A9300CB5946 /* addPersonViewController.m */; };
-		3E38B6EA18C03A9300CB5946 /* findPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E38B6E218C03A9300CB5946 /* findPersonViewController.m */; };
-		3E38B6EB18C03A9300CB5946 /* modifyPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E38B6E418C03A9300CB5946 /* modifyPersonViewController.m */; };
-		3E38B6EC18C03A9300CB5946 /* removePersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E38B6E618C03A9300CB5946 /* removePersonViewController.m */; };
-		3E38B6ED18C03A9300CB5946 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E38B6E818C03A9300CB5946 /* ViewController.m */; };
-		3E38B6EF18C03AE900CB5946 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E38B6EE18C03AE900CB5946 /* Main.storyboard */; };
 		F20786D418BF87AA00664ABB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20786D318BF87AA00664ABB /* Foundation.framework */; };
 		F20786D618BF87AA00664ABB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20786D518BF87AA00664ABB /* CoreGraphics.framework */; };
 		F20786D818BF87AA00664ABB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20786D718BF87AA00664ABB /* UIKit.framework */; };
@@ -27,6 +21,16 @@
 		F20786FD18BF87AA00664ABB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F20786FB18BF87AA00664ABB /* InfoPlist.strings */; };
 		F20786FF18BF87AA00664ABB /* Practicum3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = F20786FE18BF87AA00664ABB /* Practicum3Tests.m */; };
 		F207870A18BF8DE600664ABB /* SEListSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = F207870918BF8DE600664ABB /* SEListSingleton.m */; };
+		F25D7C2618C049ED00438378 /* addPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D7C1418C049ED00438378 /* addPersonViewController.m */; };
+		F25D7C2718C049ED00438378 /* findPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D7C1618C049ED00438378 /* findPersonViewController.m */; };
+		F25D7C2818C049ED00438378 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F25D7C1718C049ED00438378 /* Main.storyboard */; };
+		F25D7C2918C049ED00438378 /* modifyPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D7C1918C049ED00438378 /* modifyPersonViewController.m */; };
+		F25D7C2A18C049ED00438378 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D7C1B18C049ED00438378 /* Person.m */; };
+		F25D7C2B18C049ED00438378 /* PersonList.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D7C1D18C049ED00438378 /* PersonList.m */; };
+		F25D7C2C18C049ED00438378 /* Professor.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D7C1F18C049ED00438378 /* Professor.m */; };
+		F25D7C2D18C049ED00438378 /* removePersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D7C2118C049ED00438378 /* removePersonViewController.m */; };
+		F25D7C2E18C049ED00438378 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D7C2318C049ED00438378 /* Student.m */; };
+		F25D7C2F18C049ED00438378 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D7C2518C049ED00438378 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,17 +46,6 @@
 /* Begin PBXFileReference section */
 		3E38B6DC18C03A6F00CB5946 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = List.h; path = ../List.h; sourceTree = "<group>"; };
 		3E38B6DD18C03A6F00CB5946 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = List.m; path = ../List.m; sourceTree = "<group>"; };
-		3E38B6DF18C03A9300CB5946 /* addPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = addPersonViewController.h; path = ../addPersonViewController.h; sourceTree = "<group>"; };
-		3E38B6E018C03A9300CB5946 /* addPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = addPersonViewController.m; path = ../addPersonViewController.m; sourceTree = "<group>"; };
-		3E38B6E118C03A9300CB5946 /* findPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = findPersonViewController.h; path = ../findPersonViewController.h; sourceTree = "<group>"; };
-		3E38B6E218C03A9300CB5946 /* findPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = findPersonViewController.m; path = ../findPersonViewController.m; sourceTree = "<group>"; };
-		3E38B6E318C03A9300CB5946 /* modifyPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = modifyPersonViewController.h; path = ../modifyPersonViewController.h; sourceTree = "<group>"; };
-		3E38B6E418C03A9300CB5946 /* modifyPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = modifyPersonViewController.m; path = ../modifyPersonViewController.m; sourceTree = "<group>"; };
-		3E38B6E518C03A9300CB5946 /* removePersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = removePersonViewController.h; path = ../removePersonViewController.h; sourceTree = "<group>"; };
-		3E38B6E618C03A9300CB5946 /* removePersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = removePersonViewController.m; path = ../removePersonViewController.m; sourceTree = "<group>"; };
-		3E38B6E718C03A9300CB5946 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
-		3E38B6E818C03A9300CB5946 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
-		3E38B6EE18C03AE900CB5946 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		F20786D018BF87AA00664ABB /* Practicum3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practicum3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20786D318BF87AA00664ABB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F20786D518BF87AA00664ABB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,7 +56,7 @@
 		F20786E118BF87AA00664ABB /* Practicum3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Practicum3-Prefix.pch"; sourceTree = "<group>"; };
 		F20786E218BF87AA00664ABB /* SEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SEAppDelegate.h; sourceTree = "<group>"; };
 		F20786E318BF87AA00664ABB /* SEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SEAppDelegate.m; sourceTree = "<group>"; };
-		F20786EB18BF87AA00664ABB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F20786EB18BF87AA00664ABB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images.xcassets; sourceTree = "<group>"; };
 		F20786F118BF87AA00664ABB /* Practicum3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Practicum3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20786F218BF87AA00664ABB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		F20786FA18BF87AA00664ABB /* Practicum3Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Practicum3Tests-Info.plist"; sourceTree = "<group>"; };
@@ -71,6 +64,25 @@
 		F20786FE18BF87AA00664ABB /* Practicum3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Practicum3Tests.m; sourceTree = "<group>"; };
 		F207870818BF8DE600664ABB /* SEListSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEListSingleton.h; sourceTree = "<group>"; };
 		F207870918BF8DE600664ABB /* SEListSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEListSingleton.m; sourceTree = "<group>"; };
+		F25D7C1318C049ED00438378 /* addPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addPersonViewController.h; sourceTree = "<group>"; };
+		F25D7C1418C049ED00438378 /* addPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addPersonViewController.m; sourceTree = "<group>"; };
+		F25D7C1518C049ED00438378 /* findPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = findPersonViewController.h; sourceTree = "<group>"; };
+		F25D7C1618C049ED00438378 /* findPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = findPersonViewController.m; sourceTree = "<group>"; };
+		F25D7C1718C049ED00438378 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		F25D7C1818C049ED00438378 /* modifyPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modifyPersonViewController.h; sourceTree = "<group>"; };
+		F25D7C1918C049ED00438378 /* modifyPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = modifyPersonViewController.m; sourceTree = "<group>"; };
+		F25D7C1A18C049ED00438378 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		F25D7C1B18C049ED00438378 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		F25D7C1C18C049ED00438378 /* PersonList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonList.h; sourceTree = "<group>"; };
+		F25D7C1D18C049ED00438378 /* PersonList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonList.m; sourceTree = "<group>"; };
+		F25D7C1E18C049ED00438378 /* Professor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Professor.h; sourceTree = "<group>"; };
+		F25D7C1F18C049ED00438378 /* Professor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Professor.m; sourceTree = "<group>"; };
+		F25D7C2018C049ED00438378 /* removePersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = removePersonViewController.h; sourceTree = "<group>"; };
+		F25D7C2118C049ED00438378 /* removePersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = removePersonViewController.m; sourceTree = "<group>"; };
+		F25D7C2218C049ED00438378 /* Student.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		F25D7C2318C049ED00438378 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		F25D7C2418C049ED00438378 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F25D7C2518C049ED00438378 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,17 +142,25 @@
 		F20786D918BF87AA00664ABB /* Practicum3 */ = {
 			isa = PBXGroup;
 			children = (
-				3E38B6EE18C03AE900CB5946 /* Main.storyboard */,
-				3E38B6DF18C03A9300CB5946 /* addPersonViewController.h */,
-				3E38B6E018C03A9300CB5946 /* addPersonViewController.m */,
-				3E38B6E118C03A9300CB5946 /* findPersonViewController.h */,
-				3E38B6E218C03A9300CB5946 /* findPersonViewController.m */,
-				3E38B6E318C03A9300CB5946 /* modifyPersonViewController.h */,
-				3E38B6E418C03A9300CB5946 /* modifyPersonViewController.m */,
-				3E38B6E518C03A9300CB5946 /* removePersonViewController.h */,
-				3E38B6E618C03A9300CB5946 /* removePersonViewController.m */,
-				3E38B6E718C03A9300CB5946 /* ViewController.h */,
-				3E38B6E818C03A9300CB5946 /* ViewController.m */,
+				F25D7C1318C049ED00438378 /* addPersonViewController.h */,
+				F25D7C1418C049ED00438378 /* addPersonViewController.m */,
+				F25D7C1518C049ED00438378 /* findPersonViewController.h */,
+				F25D7C1618C049ED00438378 /* findPersonViewController.m */,
+				F25D7C1718C049ED00438378 /* Main.storyboard */,
+				F25D7C1818C049ED00438378 /* modifyPersonViewController.h */,
+				F25D7C1918C049ED00438378 /* modifyPersonViewController.m */,
+				F25D7C1A18C049ED00438378 /* Person.h */,
+				F25D7C1B18C049ED00438378 /* Person.m */,
+				F25D7C1C18C049ED00438378 /* PersonList.h */,
+				F25D7C1D18C049ED00438378 /* PersonList.m */,
+				F25D7C1E18C049ED00438378 /* Professor.h */,
+				F25D7C1F18C049ED00438378 /* Professor.m */,
+				F25D7C2018C049ED00438378 /* removePersonViewController.h */,
+				F25D7C2118C049ED00438378 /* removePersonViewController.m */,
+				F25D7C2218C049ED00438378 /* Student.h */,
+				F25D7C2318C049ED00438378 /* Student.m */,
+				F25D7C2418C049ED00438378 /* ViewController.h */,
+				F25D7C2518C049ED00438378 /* ViewController.m */,
 				3E38B6DC18C03A6F00CB5946 /* List.h */,
 				3E38B6DD18C03A6F00CB5946 /* List.m */,
 				F207870818BF8DE600664ABB /* SEListSingleton.h */,
@@ -259,9 +279,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3E38B6EF18C03AE900CB5946 /* Main.storyboard in Resources */,
 				F20786EC18BF87AA00664ABB /* Images.xcassets in Resources */,
 				F20786DE18BF87AA00664ABB /* InfoPlist.strings in Resources */,
+				F25D7C2818C049ED00438378 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,13 +300,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25D7C2F18C049ED00438378 /* ViewController.m in Sources */,
 				3E38B6DE18C03A6F00CB5946 /* List.m in Sources */,
-				3E38B6EA18C03A9300CB5946 /* findPersonViewController.m in Sources */,
-				3E38B6E918C03A9300CB5946 /* addPersonViewController.m in Sources */,
-				3E38B6EC18C03A9300CB5946 /* removePersonViewController.m in Sources */,
-				3E38B6ED18C03A9300CB5946 /* ViewController.m in Sources */,
+				F25D7C2C18C049ED00438378 /* Professor.m in Sources */,
+				F25D7C2E18C049ED00438378 /* Student.m in Sources */,
+				F25D7C2B18C049ED00438378 /* PersonList.m in Sources */,
+				F25D7C2918C049ED00438378 /* modifyPersonViewController.m in Sources */,
+				F25D7C2718C049ED00438378 /* findPersonViewController.m in Sources */,
+				F25D7C2618C049ED00438378 /* addPersonViewController.m in Sources */,
 				F20786E418BF87AA00664ABB /* SEAppDelegate.m in Sources */,
-				3E38B6EB18C03A9300CB5946 /* modifyPersonViewController.m in Sources */,
+				F25D7C2D18C049ED00438378 /* removePersonViewController.m in Sources */,
+				F25D7C2A18C049ED00438378 /* Person.m in Sources */,
 				F20786E018BF87AA00664ABB /* main.m in Sources */,
 				F207870A18BF8DE600664ABB /* SEListSingleton.m in Sources */,
 			);
