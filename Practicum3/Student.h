@@ -29,6 +29,6 @@
 @property (nonatomic, assign) int gradYear;
 @property (nonatomic, retain) NSString *major;
 
-- (id) initWithfName: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) idIn;
+- (id) initWithFirstName: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) idIn;
 
 @end

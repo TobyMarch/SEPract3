@@ -31,7 +31,7 @@
  no other Professor specific attributes set initially
  */
 
-- (id) initWithParam: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) IDin andTenured: (BOOL) tenuredIn{
+- (id) initWithFirstName: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) IDin andTenured: (BOOL) tenuredIn{
     
     
     if (self = [super init]) {
