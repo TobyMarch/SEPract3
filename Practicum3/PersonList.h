@@ -49,7 +49,7 @@
  */
 - (BOOL) removePerson: (int) IDin;
 
-- (BOOL) find: (int) IDin;
+- (id) find: (int) IDin;
 
 - (BOOL) printList;
 

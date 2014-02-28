@@ -26,7 +26,7 @@
         Will create a new PersonList and add to the Singleton
      
      */
-    /*
+    
     PersonList *newList = [[PersonList alloc] init];
     Student *newPerson = [Student alloc];
     newPerson = [newPerson initWithfName:@"Calvin" andlName:@"Chestnut" andID:701136956];
@@ -37,7 +37,7 @@
     [[newList list] insertObject:[[Person alloc] initWithfName:@"John" andlName:@"Huttlinger" andID:234567890] atIndex:0];
     
     [[SEListSingleton sharedList] setList:newList];
-     */
+    
 }
 
 - (void)didReceiveMemoryWarning{

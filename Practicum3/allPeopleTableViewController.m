@@ -100,6 +100,16 @@
  
 */
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if ([[[list list] objectAtIndex:indexPath.row] isKindOfClass:[Student class]]){
+        StudentDetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentDetail"];
+        NSString *title = [NSString stringWithFormat:@"%d",[[[list list] objectAtIndex:indexPath.row] ID]];
+        detail.title = title;
+        
+        [self.navigationController pushViewController:detail animated:YES];
+    } else {
+        
+    }
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

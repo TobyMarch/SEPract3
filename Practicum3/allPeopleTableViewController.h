@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "SEListSingleton.h"
+#import "StudentDetailViewController.h"
+#import "ProfessorDetailViewController.h"
 
 @interface allPeopleTableViewController : UITableViewController
 

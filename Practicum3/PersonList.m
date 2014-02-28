@@ -46,16 +46,16 @@
 }
 
 
-- (BOOL) find: (int) IDin{
+- (id) find: (int) IDin{
     
     for (int i = 0; i < [list count]; i++){
         if ([[list objectAtIndex: i] ID] == IDin){
            NSLog(@"%@", [list objectAtIndex: i]);
-            return YES;
+            return [list objectAtIndex:i];
         }
     }
 
-    return NO;
+    return Nil;
 }
 
 - (BOOL) printList{
