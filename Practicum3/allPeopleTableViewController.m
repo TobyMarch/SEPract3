@@ -100,6 +100,7 @@
  
 */
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //Allows selection
     if ([[[list list] objectAtIndex:indexPath.row] isKindOfClass:[Student class]]){
         StudentDetailViewController *detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentDetail"];
         NSString *title = [NSString stringWithFormat:@"%d",[[[list list] objectAtIndex:indexPath.row] ID]];

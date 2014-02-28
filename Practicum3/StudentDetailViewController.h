@@ -4,7 +4,7 @@
 //
 //  Created by Calvin Chestnut on 2/28/14.
 //  Copyright (c) 2014 Ithaca College. All rights reserved.
-//
+//  Something weird is going on
 
 #import <UIKit/UIKit.h>
 #import "SEListSingleton.h"
