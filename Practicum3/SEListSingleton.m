@@ -7,28 +7,28 @@
 
 #import "SEListSingleton.h"
 
-static SEListSingleton *personList;
+static SEListSingleton *sharedList;
 
 @implementation SEListSingleton
 
 -(id)init {
 	self = [super init];
-	personList = [List new];
+	personList = [PersonList new];
 	return self;
 }
 
 +(SEListSingleton *) sharedList {
-	if (!personList) {
-		personList = [[SEListSingleton alloc] init];
+	if (!sharedList) {
+		sharedList = [[SEListSingleton alloc] init];
 	}
-	return personList;
+	return sharedList;
 }
 
--(void)setList:(List *) listIn {
+-(void)setList:(PersonList *) listIn {
 	personList = listIn;
 }
 
--(List *)getList {
+-(PersonList *)getList {
 	return personList;
 }
 @end
