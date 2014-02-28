@@ -29,7 +29,7 @@
  no Student specific attributes set initially
  */
 
-- (id) initWithParam: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) idIn;
+- (id) initWithfName: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) idIn;
 {
 	if (self = [super init]) {
 		firstName = @"";
