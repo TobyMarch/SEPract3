@@ -8,6 +8,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SEListSingleton.h"
 @interface addPersonViewController : UIViewController
 
 //Properties hinging on the Person class
@@ -39,6 +40,9 @@
 //Teacher Labels
 @property (weak, nonatomic) IBOutlet UILabel *tenuredLabel;
 @property (weak, nonatomic) IBOutlet UILabel *departmentLabel;
+
+//Singleton guided List object
+@property (weak, nonatomic) List *list;
 
 //Methods
 - (IBAction)sliderChange:(UISlider *)sender;

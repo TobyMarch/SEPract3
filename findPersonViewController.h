@@ -7,12 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SEListSingleton.h"
 
 @interface findPersonViewController : UIViewController
 
 //Properties
 @property (weak, nonatomic) IBOutlet UITextField *idIn;
 @property (weak, nonatomic) IBOutlet UILabel *informationLabel;
+
+//Singleton guided List object
+@property (weak, nonatomic) List *list;
 
 //Actions
 - (IBAction)findPerson:(id)sender;

@@ -27,6 +27,14 @@
     return self;
 }
 
+//Purpose:              Makes sure that the List object is always available on load
+//Input:                none
+//Output:               none
+//Properties Modified:  list
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.list = [[SEListSingleton sharedList] getList];
+}
 
 - (void)viewDidLoad{
     [super viewDidLoad];
