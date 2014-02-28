@@ -31,6 +31,7 @@
 		F25D7C2D18C049ED00438378 /* removePersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D7C2118C049ED00438378 /* removePersonViewController.m */; };
 		F25D7C2E18C049ED00438378 /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D7C2318C049ED00438378 /* Student.m */; };
 		F25D7C2F18C049ED00438378 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F25D7C2518C049ED00438378 /* ViewController.m */; };
+		F28771BA18C134F60093C34D /* StudentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F28771B918C134F60093C34D /* StudentDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		F25D7C2318C049ED00438378 /* Student.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
 		F25D7C2418C049ED00438378 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F25D7C2518C049ED00438378 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F28771B818C134F60093C34D /* StudentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentDetailViewController.h; sourceTree = "<group>"; };
+		F28771B918C134F60093C34D /* StudentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +145,8 @@
 		F20786D918BF87AA00664ABB /* Practicum3 */ = {
 			isa = PBXGroup;
 			children = (
+				F28771B818C134F60093C34D /* StudentDetailViewController.h */,
+				F28771B918C134F60093C34D /* StudentDetailViewController.m */,
 				F25D7C1318C049ED00438378 /* addPersonViewController.h */,
 				F25D7C1418C049ED00438378 /* addPersonViewController.m */,
 				F25D7C1518C049ED00438378 /* findPersonViewController.h */,
@@ -311,6 +316,7 @@
 				F25D7C2D18C049ED00438378 /* removePersonViewController.m in Sources */,
 				F25D7C2A18C049ED00438378 /* Person.m in Sources */,
 				3EB4841C18C06E980047DD00 /* allPeopleTableViewController.m in Sources */,
+				F28771BA18C134F60093C34D /* StudentDetailViewController.m in Sources */,
 				F20786E018BF87AA00664ABB /* main.m in Sources */,
 				F207870A18BF8DE600664ABB /* SEListSingleton.m in Sources */,
 			);
