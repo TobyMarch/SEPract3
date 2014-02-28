@@ -45,6 +45,7 @@
     [[newList list] insertObject:[[Person alloc] initWithfName:@"John" andlName:@"Huttlinger" andID:234567890] atIndex:0];
     */
     [[SEListSingleton sharedList] setList:newList];
+     
     
 }
 

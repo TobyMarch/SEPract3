@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SEListSingleton.h"
 
 @interface ProfessorDetailViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *idLabel;
+@property (weak, nonatomic) IBOutlet UILabel *departmentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *salaryLabel;
+@property (weak, nonatomic) IBOutlet UILabel *tenureLabel;
 
 @end
