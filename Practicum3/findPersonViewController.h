@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *informationLabel;
 
 //Singleton guided List object
-@property (weak, nonatomic) List *list;
+@property (weak, nonatomic) PersonList *list;
 
 //Actions
 - (IBAction)findPerson:(id)sender;

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E38B6DE18C03A6F00CB5946 /* List.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E38B6DD18C03A6F00CB5946 /* List.m */; };
 		F20786D418BF87AA00664ABB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20786D318BF87AA00664ABB /* Foundation.framework */; };
 		F20786D618BF87AA00664ABB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20786D518BF87AA00664ABB /* CoreGraphics.framework */; };
 		F20786D818BF87AA00664ABB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20786D718BF87AA00664ABB /* UIKit.framework */; };
@@ -44,8 +43,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3E38B6DC18C03A6F00CB5946 /* List.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = List.h; path = ../List.h; sourceTree = "<group>"; };
-		3E38B6DD18C03A6F00CB5946 /* List.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = List.m; path = ../List.m; sourceTree = "<group>"; };
 		F20786D018BF87AA00664ABB /* Practicum3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practicum3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20786D318BF87AA00664ABB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F20786D518BF87AA00664ABB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -161,8 +158,6 @@
 				F25D7C2318C049ED00438378 /* Student.m */,
 				F25D7C2418C049ED00438378 /* ViewController.h */,
 				F25D7C2518C049ED00438378 /* ViewController.m */,
-				3E38B6DC18C03A6F00CB5946 /* List.h */,
-				3E38B6DD18C03A6F00CB5946 /* List.m */,
 				F207870818BF8DE600664ABB /* SEListSingleton.h */,
 				F207870918BF8DE600664ABB /* SEListSingleton.m */,
 				F20786E218BF87AA00664ABB /* SEAppDelegate.h */,
@@ -301,7 +296,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F25D7C2F18C049ED00438378 /* ViewController.m in Sources */,
-				3E38B6DE18C03A6F00CB5946 /* List.m in Sources */,
 				F25D7C2C18C049ED00438378 /* Professor.m in Sources */,
 				F25D7C2E18C049ED00438378 /* Student.m in Sources */,
 				F25D7C2B18C049ED00438378 /* PersonList.m in Sources */,

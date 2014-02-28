@@ -42,7 +42,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *departmentLabel;
 
 //Singleton guided List object
-@property (weak, nonatomic) List *list;
+@property (weak, nonatomic) PersonList *list;
 
 //Methods
 - (IBAction)sliderChange:(UISlider *)sender;
