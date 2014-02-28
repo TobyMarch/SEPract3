@@ -32,10 +32,18 @@
     newPerson = [newPerson initWithfName:@"Calvin" andlName:@"Chestnut" andID:701136956];
     [[newList list] insertObject:newPerson atIndex:0];
     
+    Student *secondPerson = [Student alloc];
+    secondPerson = [secondPerson initWithfName:@"Toby" andlName:@"March" andID:700843602];
+    [secondPerson setGpa:3.6];
+    [secondPerson setGradYear:2014];
+    [secondPerson setMajor:@"Computer Science"];
+    [[newList list] insertObject:secondPerson atIndex:0];
+    
+    /*
     [[newList list] insertObject:[[Person alloc] initWithfName:@"Toby" andlName:@"March" andID:123456789] atIndex:0];
     [[newList list] insertObject:[[Person alloc] initWithfName:@"Chris" andlName:@"Kindrat" andID:987654321] atIndex:0];
     [[newList list] insertObject:[[Person alloc] initWithfName:@"John" andlName:@"Huttlinger" andID:234567890] atIndex:0];
-    
+    */
     [[SEListSingleton sharedList] setList:newList];
     
 }
