@@ -40,7 +40,7 @@
     [[newList list] insertObject:secondPerson atIndex:0];
     
     Professor *thirdPerson = [Professor alloc];
-    thirdPerson = [thirdPerson initWithFirstName:@"John" andLastName:@"Barr" andID:4000000001 andTenured:YES];
+    thirdPerson = [thirdPerson initWithfName:@"John" andlName:@"Barr" andID:400000001];
     [thirdPerson setSalary:10000.0];
     [thirdPerson setDepartment:@"Computer Science"];
     [[newList list] insertObject:thirdPerson atIndex:0];
