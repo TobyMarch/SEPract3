@@ -14,9 +14,9 @@
 
 #import "addPersonViewController.h"
 
-@interface addPersonViewController ()
+/*@interface addPersonViewController ()
 
-@end
+@end*/
 
 @implementation addPersonViewController
 
@@ -102,6 +102,19 @@
 
 
 - (IBAction)createPerson:(id)sender {
+    // Create object to be added to list
+    // (I'm hoping that there's a more elegant way to determine which child object is being created)
+    if (self.gradYearLabel.hidden == NO) {
+        Student *newStudent = [Student alloc];
+        newStudent = [newStudent initWithfName:self.firstName.text andlName:self.lastName.text andID:self.idNumber.text.intValue];
+    }
+    else {
+        Professor *newProfessor = [Professor alloc];
+        //newProfessor = [newProfessor initWithFirstName:self.firstName.text andLastName:self.lastName.text andID:self.idNumber.text.intValue andTenured:self.tenureStatus];
+        
+    }
+    
+    //[[[[SEListSingleton sharedList] getList] list] insertObject:<#(id)#> atIndex:0];
     
 }
 
