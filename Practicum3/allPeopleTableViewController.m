@@ -86,9 +86,11 @@
     [[cell textLabel] setText:name];
     //Sets subtitle Text
     //Use this line for Person type (Professor/Student)
-    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@", [[[list list] objectAtIndex:indexPath.row] class]]];
+    //[[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@", [[[list list] objectAtIndex:indexPath.row] class]]];
     //Use this line for ID number
     //[[cell detailTextLabel] setText:[NSString stringWithFormat:@"%d", [[[list list] objectAtIndex:indexPath.row] ID]]];
+    //Use this line for both!
+    [[cell detailTextLabel] setText:[NSString stringWithFormat:@"%@: %d", [[[list list] objectAtIndex:indexPath.row] class], [[[list list] objectAtIndex:indexPath.row] ID]]];
     
     return cell;
 }
