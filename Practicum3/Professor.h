@@ -30,6 +30,6 @@
 @property (nonatomic, assign) BOOL tenure;
 @property (nonatomic, retain) NSString *department;
 
-- (id) initWithParam: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) IDin andTenured: (BOOL) tenuredIn;
+- (id) initWithFirstName: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) IDin andTenured: (BOOL) tenuredIn;
                               
 @end
