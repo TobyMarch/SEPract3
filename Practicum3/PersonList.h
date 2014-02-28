@@ -51,6 +51,8 @@
 
 - (BOOL) find: (int) IDin;
 
+- (id) returnPerson: (int) IDin;
+
 - (BOOL) printList;
 
 

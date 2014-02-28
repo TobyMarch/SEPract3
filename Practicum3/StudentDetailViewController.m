@@ -32,7 +32,7 @@
     
     int studentID = [[self title] intValue];
     
-    Student *theStudent = [[[SEListSingleton sharedList] getList] find:studentID];
+    Student *theStudent = [[[SEListSingleton sharedList] getList] returnPerson:studentID];
     [self setTitle:[NSString stringWithFormat:@"%@ %@",[theStudent firstName], [theStudent lastName]]];
     [IdLabel setText:[NSString stringWithFormat:@"ID: %d", [theStudent ID]]];
     [MajorLabel setText:[NSString stringWithFormat:@"Major: %@", [theStudent major]]];

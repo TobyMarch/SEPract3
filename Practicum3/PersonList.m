@@ -58,6 +58,16 @@
     return NO;
 }
 
+- (id) returnPerson: (int) IDin {
+    for (int i = 0; i < [list count]; i++){
+        if ([[list objectAtIndex: i] ID] == IDin){
+            //NSLog(@"%@", [list objectAtIndex: i]);
+            return [list objectAtIndex: i];
+        }
+    }
+    return Nil;
+}
+
 - (BOOL) printList{
     /*
     for (int i = 0; i < [list count]; i++){
