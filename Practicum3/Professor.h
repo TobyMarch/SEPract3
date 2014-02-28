@@ -31,11 +31,5 @@
 @property (nonatomic, retain) NSString *department;
 
 - (id) initWithParam: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) IDin andTenured: (BOOL) tenuredIn;
-- (double) getSalary;
-- (BOOL) isTenured;
-- (NSString *) getDepartment;
-- (void) setSalary: (double) salaryIn;
-- (void) setTenure: (BOOL) tenuredIn;
-- (void) setDepartment: (NSString *) departmentIn;
                               
 @end

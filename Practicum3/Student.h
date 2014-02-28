@@ -31,12 +31,4 @@
 
 - (id) initWithParam: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) idIn;
 
-- (double) getGpa;
-- (int) getGradYear;
-- (NSString *) getMajor;
-
-- (void) setGpa: (double) gpaIn;
-- (void) setGradYear: (int) yearIn;
-- (void) setMajor: (NSString *) majorIn;
-
 @end
