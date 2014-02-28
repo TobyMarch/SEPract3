@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="610-WA-GOj">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -53,7 +53,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Qfa-BU-5AP" kind="push" identifier="listSegue" id="hnm-sf-bUa"/>
+                                    <segue destination="rgf-th-SJa" kind="push" identifier="listSegue" id="5xR-Cf-Qn6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YDO-ml-tQK">
@@ -262,6 +262,52 @@
             </objects>
             <point key="canvasLocation" x="767" y="155"/>
         </scene>
+        <!--All People Table View Controller-->
+        <scene sceneID="NzJ-ci-gGj">
+            <objects>
+                <tableViewController id="rgf-th-SJa" customClass="allPeopleTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Rj8-JO-CWj">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PersonCell" textLabel="RoQ-Lg-VMV" detailTextLabel="6KF-gZ-ylZ" style="IBUITableViewCellStyleSubtitle" id="DBO-Dt-tTm">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RoQ-Lg-VMV">
+                                            <rect key="frame" x="10" y="2" width="36" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6KF-gZ-ylZ">
+                                            <rect key="frame" x="10" y="24" width="47" height="17"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
+                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rgf-th-SJa" id="Fth-RJ-ZYA"/>
+                            <outlet property="delegate" destination="rgf-th-SJa" id="Twc-M5-hiw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="eTa-w8-CZO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ftq-A6-Gcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="767" y="836"/>
+        </scene>
         <!--Modify Person View Controller - Modify Person-->
         <scene sceneID="4VW-gm-xNf">
             <objects>
@@ -321,37 +367,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PwW-l5-zWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="767" y="1458"/>
-        </scene>
-        <!--View Controller - List People-->
-        <scene sceneID="xv7-tR-Gz5">
-            <objects>
-                <viewController id="Qfa-BU-5AP" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="i7W-g2-w5P">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name and Information of all people in the roster" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="297" translatesAutoresizingMaskIntoConstraints="NO" id="XQo-F8-P0O">
-                                <rect key="frame" x="12" y="6" width="297" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="297" id="Qwx-5L-xRS"/>
-                                    <constraint firstAttribute="height" constant="38" id="ZTy-No-dNB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="XQo-F8-P0O" firstAttribute="top" secondItem="i7W-g2-w5P" secondAttribute="top" constant="6" id="QV6-kj-HsT"/>
-                            <constraint firstItem="XQo-F8-P0O" firstAttribute="centerX" secondItem="i7W-g2-w5P" secondAttribute="centerX" type="default" id="mpJ-cu-kBM"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="List People" id="9v1-Jq-qqR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5yI-dQ-ovf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="767" y="805"/>
         </scene>
         <!--Add Person View Controller - Add Person-->
         <scene sceneID="Pay-aa-njk">
@@ -450,7 +465,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap Here!" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxc-xJ-GZK">
-                                <rect key="frame" x="170" y="356" width="97" height="27"/>
+                                <rect key="frame" x="170" y="356" width="97" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>

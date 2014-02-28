@@ -22,7 +22,7 @@
 	return self;
 }
 
--(id) initWithfName: (NSString *)firstNameIn andlName: (NSString *)lastNameIn andID: (int) IDin
+-(id) initWithfName:(NSString *)firstNameIn andlName:(NSString *)lastNameIn andID:(int)IDin
 {
 	self = [super init];
 	if (self) {

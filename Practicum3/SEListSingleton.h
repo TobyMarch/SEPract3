@@ -7,6 +7,8 @@
 
 #import <Foundation/Foundation.h>
 #import "PersonList.h"
+#import "Student.h"
+#import "Professor.h"
 
 @interface SEListSingleton : NSObject {
 	PersonList *personList;
