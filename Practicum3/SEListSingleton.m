@@ -7,7 +7,7 @@
 
 #import "SEListSingleton.h"
 
-static List *personList;
+static SEListSingleton *personList;
 
 @implementation SEListSingleton
 
@@ -18,10 +18,10 @@ static List *personList;
 }
 
 +(SEListSingleton *) sharedList {
-	if (!sharedList) {
-		sharedList = [[SEListSingleton alloc] init];
+	if (!personList) {
+		personList = [[SEListSingleton alloc] init];
 	}
-	return sharedList;
+	return personList;
 }
 
 -(void)setList:(List *) listIn {
