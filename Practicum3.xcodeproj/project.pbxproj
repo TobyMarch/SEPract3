@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3EB4841C18C06E980047DD00 /* allPeopleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4841B18C06E980047DD00 /* allPeopleTableViewController.m */; };
+		3EB4842818C199060047DD00 /* ProfessorDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB4842718C199060047DD00 /* ProfessorDetailViewController.m */; };
 		F20786D418BF87AA00664ABB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20786D318BF87AA00664ABB /* Foundation.framework */; };
 		F20786D618BF87AA00664ABB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20786D518BF87AA00664ABB /* CoreGraphics.framework */; };
 		F20786D818BF87AA00664ABB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F20786D718BF87AA00664ABB /* UIKit.framework */; };
@@ -47,6 +48,8 @@
 /* Begin PBXFileReference section */
 		3EB4841A18C06E980047DD00 /* allPeopleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allPeopleTableViewController.h; sourceTree = "<group>"; };
 		3EB4841B18C06E980047DD00 /* allPeopleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = allPeopleTableViewController.m; sourceTree = "<group>"; };
+		3EB4842618C199060047DD00 /* ProfessorDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfessorDetailViewController.h; sourceTree = "<group>"; };
+		3EB4842718C199060047DD00 /* ProfessorDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfessorDetailViewController.m; sourceTree = "<group>"; };
 		F20786D018BF87AA00664ABB /* Practicum3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Practicum3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20786D318BF87AA00664ABB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F20786D518BF87AA00664ABB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -147,6 +150,8 @@
 			children = (
 				F28771B818C134F60093C34D /* StudentDetailViewController.h */,
 				F28771B918C134F60093C34D /* StudentDetailViewController.m */,
+				3EB4842618C199060047DD00 /* ProfessorDetailViewController.h */,
+				3EB4842718C199060047DD00 /* ProfessorDetailViewController.m */,
 				F25D7C1318C049ED00438378 /* addPersonViewController.h */,
 				F25D7C1418C049ED00438378 /* addPersonViewController.m */,
 				F25D7C1518C049ED00438378 /* findPersonViewController.h */,
@@ -317,6 +322,7 @@
 				F25D7C2A18C049ED00438378 /* Person.m in Sources */,
 				3EB4841C18C06E980047DD00 /* allPeopleTableViewController.m in Sources */,
 				F28771BA18C134F60093C34D /* StudentDetailViewController.m in Sources */,
+				3EB4842818C199060047DD00 /* ProfessorDetailViewController.m in Sources */,
 				F20786E018BF87AA00664ABB /* main.m in Sources */,
 				F207870A18BF8DE600664ABB /* SEListSingleton.m in Sources */,
 			);
