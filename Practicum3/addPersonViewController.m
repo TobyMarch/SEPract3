@@ -123,9 +123,22 @@
             [newProfessor setDepartment:self.departmentName.text];
             [[list list] insertObject:newProfessor atIndex:0];
         }
+        UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"Added Person" message:[NSString stringWithFormat:@"%@ added!", self.firstName.text] delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:nil, nil];
+        [successAlert show];
+    } else {
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Add Person Failed" message:@"Person with that ID already exists" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [errorAlert show];
     }
     //An 'else' case is needed here, but I don't know how to implement it yet
     
+}
+
+//Purpose: Dismisses view when alert is responded to
+//Input: buttonIndex, alertViewPressed
+//Output: none
+//Properties modified: dismisses current ViewController
+-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 //Purpose: Hides the keyboards of the text fields on the current view whenever a user touches anywhere outside the keyboard
