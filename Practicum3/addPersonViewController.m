@@ -104,30 +104,24 @@
 - (IBAction)createPerson:(id)sender {
     // Create object to be added to list
     // (I'm hoping that there's a more elegant way to determine which child object is being created)
-    if (![list findPerson:self.idNumber.text.intValue]) {
-        if (self.gradYearLabel.hidden == NO) {
-            if(!([self.firstName.text isEqualToString:@""] || [self.lastName.text isEqualToString:@""] || (self.idNumber.text.intValue==0) || (self.mainSlider.value==0) || (self.graduationYear.text.intValue==0) || [self.majorBox.text isEqualToString:@""])){
-                Student *newStudent = [Student alloc];
-                newStudent = [newStudent initWithfName:self.firstName.text andlName:self.lastName.text andID:self.idNumber.text.intValue];
-                [newStudent setGpa:self.mainSlider.value];
-                [newStudent setGradYear:self.graduationYear.text.intValue];
-                [newStudent setMajor:self.majorBox.text];
-                [[list list] insertObject:newStudent atIndex:0];
-            }
+    BOOL added;
+    if (self.gradYearLabel.hidden == NO) {
+        if(!([self.firstName.text isEqualToString:@""] || [self.lastName.text isEqualToString:@""] || (self.idNumber.text.intValue==0) || (self.mainSlider.value==0) || (self.graduationYear.text.intValue==0) || [self.majorBox.text isEqualToString:@""])){
+            BOOL added = [list addStudentWithMajor:self.majorBox.text andYear:self.graduationYear.text.intValue andGpa:self.mainSlider.value andFirstName:self.firstName.text andLastName:self.lastName.text andID:self.idNumber.text.intValue];
         }
-        else {
-            Professor *newProfessor = [Professor alloc];
-            newProfessor = [newProfessor initWithfName:self.firstName.text andlName:self.lastName.text andID:self.idNumber.text.intValue];
-            [newProfessor setSalary:self.mainSlider.value];
-            [newProfessor setTenure:self.tenureStatus.isOn];
-            [newProfessor setDepartment:self.departmentName.text];
-            [[list list] insertObject:newProfessor atIndex:0];
+    }
+    else {
+        if(!([self.firstName.text isEqualToString:@""] || [self.lastName.text isEqualToString:@""] || (self.idNumber.text.intValue==0) || (self.mainSlider.value==0) || [self.departmentName.text isEqualToString:@""])){
+            BOOL added = [list addProfessorWithSalary:self.mainSlider.value andTenured:self.tenureStatus.isOn andDept:self.departmentName.text andFirstName:self.firstName.text andLastName:self.lastName.text andID:self.idNumber.text.intValue];
         }
-        UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"Added Person" message:[NSString stringWithFormat:@"%@ added!", self.firstName.text] delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:nil, nil];
-        [successAlert show];
-    } else {
+    }
+    if(!added) {
         UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Add Person Failed" message:@"Person with that ID already exists" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [errorAlert show];
+    }
+    else{
+        UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"Added Person" message:[NSString stringWithFormat:@"%@ added!", self.firstName.text] delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:nil, nil];
+        [successAlert show];
     }
     //An 'else' case is needed here, but I don't know how to implement it yet
     
