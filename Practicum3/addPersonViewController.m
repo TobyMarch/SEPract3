@@ -79,8 +79,6 @@
         self.mainSlider.maximumValue = 4.0f;
         self.sliderLabel.text = @"GPA: ";
         self.sliderValue.text = @"4.0";
-        
-        
     }
     else{
         self.graduationYear.hidden = YES;
@@ -107,11 +105,18 @@
     if (self.gradYearLabel.hidden == NO) {
         Student *newStudent = [Student alloc];
         newStudent = [newStudent initWithfName:self.firstName.text andlName:self.lastName.text andID:self.idNumber.text.intValue];
+        [newStudent setGpa:self.mainSlider.value];
+        [newStudent setGradYear:self.graduationYear.text.intValue];
+        [newStudent setMajor:self.majorBox.text];
+        [[_list list] insertObject:newStudent atIndex:0];
     }
     else {
         Professor *newProfessor = [Professor alloc];
-        //newProfessor = [newProfessor initWithFirstName:self.firstName.text andLastName:self.lastName.text andID:self.idNumber.text.intValue andTenured:self.tenureStatus];
-        
+        newProfessor = [newProfessor initWithfName:self.firstName.text andlName:self.lastName.text andID:self.idNumber.text.intValue];
+        [newProfessor setSalary:self.mainSlider.value];
+        [newProfessor setTenure:self.tenureStatus.isOn];
+        [newProfessor setDepartment:self.departmentName.text];
+        [[_list list] insertObject:newProfessor atIndex:0];
     }
     
     //[[[[SEListSingleton sharedList] getList] list] insertObject:<#(id)#> atIndex:0];
