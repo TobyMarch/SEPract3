@@ -104,14 +104,15 @@
 - (IBAction)createPerson:(id)sender {
     // Create object to be added to list
     // (I'm hoping that there's a more elegant way to determine which child object is being created)
+    BOOL added=NO;
     if (self.gradYearLabel.hidden == NO) {
         if(!([self.firstName.text isEqualToString:@""] || [self.lastName.text isEqualToString:@""] || (self.idNumber.text.intValue==0) || (self.mainSlider.value==0) || (self.graduationYear.text.intValue==0) || [self.majorBox.text isEqualToString:@""])){
-            BOOL added = [list addStudentWithMajor:self.majorBox.text andYear:self.graduationYear.text.intValue andGpa:self.mainSlider.value andFirstName:self.firstName.text andLastName:self.lastName.text andID:self.idNumber.text.intValue];
+            added = [list addStudentWithMajor:self.majorBox.text andYear:self.graduationYear.text.intValue andGpa:self.mainSlider.value andFirstName:self.firstName.text andLastName:self.lastName.text andID:self.idNumber.text.intValue];
         }
     }
     else {
         if(!([self.firstName.text isEqualToString:@""] || [self.lastName.text isEqualToString:@""] || (self.idNumber.text.intValue==0) || (self.mainSlider.value==0) || [self.departmentName.text isEqualToString:@""])){
-            BOOL added = [list addProfessorWithSalary:self.mainSlider.value andTenured:self.tenureStatus.isOn andDept:self.departmentName.text andFirstName:self.firstName.text andLastName:self.lastName.text andID:self.idNumber.text.intValue];
+            added = [list addProfessorWithSalary:self.mainSlider.value andTenured:self.tenureStatus.isOn andDept:self.departmentName.text andFirstName:self.firstName.text andLastName:self.lastName.text andID:self.idNumber.text.intValue];
         }
     }
     if(!added) {
