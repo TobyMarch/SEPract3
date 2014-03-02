@@ -20,6 +20,8 @@
 
 @implementation addPersonViewController
 
+@synthesize list;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -102,24 +104,25 @@
 - (IBAction)createPerson:(id)sender {
     // Create object to be added to list
     // (I'm hoping that there's a more elegant way to determine which child object is being created)
-    if (self.gradYearLabel.hidden == NO) {
-        Student *newStudent = [Student alloc];
-        newStudent = [newStudent initWithfName:self.firstName.text andlName:self.lastName.text andID:self.idNumber.text.intValue];
-        [newStudent setGpa:self.mainSlider.value];
-        [newStudent setGradYear:self.graduationYear.text.intValue];
-        [newStudent setMajor:self.majorBox.text];
-        [[_list list] insertObject:newStudent atIndex:0];
+    if (![list findPerson:self.idNumber.text.intValue]) {
+        if (self.gradYearLabel.hidden == NO) {
+            Student *newStudent = [Student alloc];
+            newStudent = [newStudent initWithfName:self.firstName.text andlName:self.lastName.text andID:self.idNumber.text.intValue];
+            [newStudent setGpa:self.mainSlider.value];
+            [newStudent setGradYear:self.graduationYear.text.intValue];
+            [newStudent setMajor:self.majorBox.text];
+            [[list list] insertObject:newStudent atIndex:0];
+        }
+        else {
+            Professor *newProfessor = [Professor alloc];
+            newProfessor = [newProfessor initWithfName:self.firstName.text andlName:self.lastName.text andID:self.idNumber.text.intValue];
+            [newProfessor setSalary:self.mainSlider.value];
+            [newProfessor setTenure:self.tenureStatus.isOn];
+            [newProfessor setDepartment:self.departmentName.text];
+            [[list list] insertObject:newProfessor atIndex:0];
+        }
     }
-    else {
-        Professor *newProfessor = [Professor alloc];
-        newProfessor = [newProfessor initWithfName:self.firstName.text andlName:self.lastName.text andID:self.idNumber.text.intValue];
-        [newProfessor setSalary:self.mainSlider.value];
-        [newProfessor setTenure:self.tenureStatus.isOn];
-        [newProfessor setDepartment:self.departmentName.text];
-        [[_list list] insertObject:newProfessor atIndex:0];
-    }
-    
-    //[[[[SEListSingleton sharedList] getList] list] insertObject:<#(id)#> atIndex:0];
+    //An 'else' case is needed here, but I don't know how to implement it yet
     
 }
 

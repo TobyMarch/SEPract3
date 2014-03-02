@@ -63,7 +63,6 @@
         UIViewController *detail;
         //Determine class of found entry
         NSString *entryClass = [NSString stringWithFormat:@"%@", [[list returnPerson:idValue] class]];
-        //if ([[[list returnPerson:idValue] class] isEqualToString: @"Student"]) {
         if ([entryClass isEqualToString:@"Student"]) {
             self.informationLabel.text = @"Student Found!";
             detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentDetail"];
