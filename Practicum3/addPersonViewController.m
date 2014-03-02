@@ -138,7 +138,9 @@
 //Output: none
 //Properties modified: dismisses current ViewController
 -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    [self.navigationController popToRootViewControllerAnimated:YES];
+    if ([alertView.title isEqualToString:@"Added Person"]){
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }
 }
 
 //Purpose: Hides the keyboards of the text fields on the current view whenever a user touches anywhere outside the keyboard
