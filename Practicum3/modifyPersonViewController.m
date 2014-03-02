@@ -22,6 +22,8 @@
 
 @implementation modifyPersonViewController
 
+@synthesize list;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,6 +31,15 @@
         // Custom initialization
     }
     return self;
+}
+
+//Purpose:              Makes sure that the List object is always available on load
+//Input:                none
+//Output:               none
+//Properties Modified:  list
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.list = [[SEListSingleton sharedList] getList];
 }
 
 - (void)viewDidLoad
@@ -49,5 +60,20 @@
 //Properties Modified: None
 - (IBAction)performMod:(UIButton *)sender {
     //Code to modify a person here!
+    int idValue = self.idIn.text.intValue;
+    if ([list findPerson:idValue]) {
+    }
+    else {
+        
+    }
+}
+
+//Purpose: Hides the keyboards of the text fields on the current view whenever a user touches anywhere outside the keyboard
+//when entering text/numbers into any text field SOLELY on this view
+//Input: User touch
+//Output: None
+//Properties Modified: None
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [_idIn resignFirstResponder];
 }
 @end
