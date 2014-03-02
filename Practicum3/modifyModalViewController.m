@@ -8,6 +8,7 @@
 
 #import "modifyModalViewController.h"
 
+
 @interface modifyModalViewController ()
 
 @end
@@ -32,7 +33,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+//Purpose: Informs the user of what value the current slider position is
+//Input: Slider position
+//Output: Outputs value into the text field called sliderValue (located beneath the slider )
+//Properties Modified: sliderValue's text field
+- (IBAction)sliderChange:(UISlider *)sender {
+    double value = sender.value;
+    self.sliderValue.text = [NSString stringWithFormat:@"%.1f", value];
+    
+}
 
 - (IBAction)modifyPerson:(id)sender{
     

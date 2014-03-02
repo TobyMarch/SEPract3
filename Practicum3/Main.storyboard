@@ -629,16 +629,20 @@
                     </view>
                     <navigationItem key="navigationItem" title="Modifying Person" id="IaO-fT-ZH7"/>
                     <connections>
+                        <outlet property="departmentLabel" destination="nQ8-fZ-zVR" id="y9F-Nz-EeD"/>
                         <outlet property="departmentName" destination="O7i-cf-9cm" id="2Ib-DO-5xW"/>
                         <outlet property="firstName" destination="Z75-0d-fII" id="lX8-XS-93T"/>
+                        <outlet property="gradYearLabel" destination="LMI-Gq-FaX" id="ALy-Cf-pk2"/>
                         <outlet property="graduationYear" destination="zRg-Bl-veF" id="Ni3-K4-mV8"/>
                         <outlet property="idNumber" destination="3q5-mY-zTe" id="rxa-ll-LRz"/>
                         <outlet property="lastName" destination="uJB-t5-uzR" id="uX8-iR-PmA"/>
                         <outlet property="mainSlider" destination="9df-xa-RRW" id="we7-Ba-NJd"/>
                         <outlet property="majorBox" destination="78X-i5-KCP" id="1aj-tP-Kni"/>
+                        <outlet property="majorLabel" destination="pez-BT-Cvb" id="tf2-et-dm0"/>
                         <outlet property="sliderLabel" destination="t6R-La-VrL" id="h6d-Yh-20D"/>
                         <outlet property="sliderValue" destination="rG8-ad-7Fz" id="ygr-jk-qvf"/>
                         <outlet property="tenureStatus" destination="END-YC-2u7" id="LYT-fW-7xo"/>
+                        <outlet property="tenuredLabel" destination="Gif-tK-9v7" id="Aej-3f-u0Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sB-bF-jac" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -918,6 +922,7 @@
                         <outlet property="graduationYear" destination="fxc-xJ-GZK" id="nfb-YR-Cz5"/>
                         <outlet property="idNumber" destination="IP8-PJ-6ZH" id="jQK-aF-WAY"/>
                         <outlet property="lastName" destination="VQe-ad-juP" id="gRc-RD-rro"/>
+                        <outlet property="mainSegementedController" destination="Ud9-Z8-wuW" id="smR-mW-2WB"/>
                         <outlet property="mainSlider" destination="iqU-rI-7P1" id="wOu-Hy-DqM"/>
                         <outlet property="majorBox" destination="hfx-0O-p6b" id="qk8-Vi-09q"/>
                         <outlet property="majorLabel" destination="ovc-59-flQ" id="VtU-bY-5II"/>

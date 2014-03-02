@@ -26,6 +26,8 @@
 @property (weak, nonatomic) IBOutlet UISwitch *tenureStatus; //Text Field which holds the tenured status of a professor
 @property (weak, nonatomic) IBOutlet UITextField *departmentName; //Text Field which holds the department name of a professor
 
+//Property determining which elements are shown
+@property (weak, nonatomic) IBOutlet UISegmentedControl *mainSegementedController;
 
 //Properties that will change depending on who/what is being created
 //3 Slider Properties

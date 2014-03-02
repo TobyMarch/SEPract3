@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SEListSingleton.h"
 
 @interface modifyModalViewController : UIViewController
 
@@ -41,7 +42,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *departmentLabel;
 
 //Singleton guided List object
-//@property (weak, nonatomic) PersonList *list;
+@property (weak, nonatomic) PersonList *list;
 
 
 //Methods
