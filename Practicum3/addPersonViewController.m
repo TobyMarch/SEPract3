@@ -106,12 +106,14 @@
     // (I'm hoping that there's a more elegant way to determine which child object is being created)
     if (![list findPerson:self.idNumber.text.intValue]) {
         if (self.gradYearLabel.hidden == NO) {
-            Student *newStudent = [Student alloc];
-            newStudent = [newStudent initWithfName:self.firstName.text andlName:self.lastName.text andID:self.idNumber.text.intValue];
-            [newStudent setGpa:self.mainSlider.value];
-            [newStudent setGradYear:self.graduationYear.text.intValue];
-            [newStudent setMajor:self.majorBox.text];
-            [[list list] insertObject:newStudent atIndex:0];
+            if(!([self.firstName.text isEqualToString:@""] || [self.lastName.text isEqualToString:@""] || (self.idNumber.text.intValue==0) || (self.mainSlider.value==0) || (self.graduationYear.text.intValue==0) || [self.majorBox.text isEqualToString:@""])){
+                Student *newStudent = [Student alloc];
+                newStudent = [newStudent initWithfName:self.firstName.text andlName:self.lastName.text andID:self.idNumber.text.intValue];
+                [newStudent setGpa:self.mainSlider.value];
+                [newStudent setGradYear:self.graduationYear.text.intValue];
+                [newStudent setMajor:self.majorBox.text];
+                [[list list] insertObject:newStudent atIndex:0];
+            }
         }
         else {
             Professor *newProfessor = [Professor alloc];
