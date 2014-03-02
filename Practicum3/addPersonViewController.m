@@ -107,16 +107,16 @@
     BOOL added=NO;
     BOOL emptyField=NO;
     if (self.gradYearLabel.hidden == NO) {
-        if(!([self.firstName.text isEqualToString:@""] || [self.lastName.text isEqualToString:@""] || (self.idNumber.text.intValue==0) || (self.mainSlider.value==0) || (self.graduationYear.text.intValue==0) || [self.majorBox.text isEqualToString:@""])){
-            added = [list addStudentWithMajor:self.majorBox.text andYear:self.graduationYear.text.intValue andGpa:self.mainSlider.value andFirstName:self.firstName.text andLastName:self.lastName.text andID:self.idNumber.text.intValue];
+        if(!([self.firstName.text isEqualToString:@""] || [self.lastName.text isEqualToString:@""] || (self.idNumber.text.intValue==0) || (self.sliderValue.text.doubleValue==0.0) || (self.graduationYear.text.intValue==0) || [self.majorBox.text isEqualToString:@""])){
+            added = [list addStudentWithMajor:self.majorBox.text andYear:self.graduationYear.text.intValue andGpa:self.sliderValue.text.doubleValue andFirstName:self.firstName.text andLastName:self.lastName.text andID:self.idNumber.text.intValue];
         }
         else{
             emptyField=YES;
         }
     }
     else {
-        if(!([self.firstName.text isEqualToString:@""] || [self.lastName.text isEqualToString:@""] || (self.idNumber.text.intValue==0) || (self.mainSlider.value==0) || [self.departmentName.text isEqualToString:@""])){
-            added = [list addProfessorWithSalary:self.mainSlider.value andTenured:self.tenureStatus.isOn andDept:self.departmentName.text andFirstName:self.firstName.text andLastName:self.lastName.text andID:self.idNumber.text.intValue];
+        if(!([self.firstName.text isEqualToString:@""] || [self.lastName.text isEqualToString:@""] || (self.idNumber.text.intValue==0) || [self.departmentName.text isEqualToString:@""])){
+            added = [list addProfessorWithSalary:self.sliderValue.text.doubleValue andTenured:self.tenureStatus.isOn andDept:self.departmentName.text andFirstName:self.firstName.text andLastName:self.lastName.text andID:self.idNumber.text.intValue];
         }
         else{
             emptyField=YES;
