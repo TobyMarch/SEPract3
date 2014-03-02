@@ -14,7 +14,7 @@
 #import "Professor.h"
 
 @implementation Professor
-@synthesize tenure, isFaculty, salary, department;
+@synthesize tenure, salary, department;
 /*
  method: Professor Constructor
  purpose: Create an instance of a Professor object
@@ -31,14 +31,13 @@
  no other Professor specific attributes set initially
  */
 
-- (id) initWithFirstName: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) IDin andTenured: (BOOL) tenuredIn{
+- (id) initWithFirstName: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) IDin andTenured: (BOOL) tenuredIn andSalary:(double)salaryIn andDept:(NSString *)deptIn{
     
     
-    if (self = [super init]) {
-        firstName = @"";
-        lastName = @"";
-        ID = 0;
-        tenure = false;
+    if (self = [super initWithfName:firstNameIn andlName:lastNameIn andID:IDin]) {
+        salary = salaryIn;
+        department = deptIn;
+        tenure = tenuredIn;
         return (self);
     }
     return nil;

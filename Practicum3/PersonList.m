@@ -8,6 +8,8 @@
 //
 
 #import "PersonList.h"
+#import "Professor.h"
+#import "Student.h"
 
 @implementation PersonList
 
@@ -24,11 +26,20 @@
     
 }
 
-- (BOOL) addPerson: (Person*) personIn;
-{
-    Person *newNode = [Person new];
-    [list addObject: newNode];
-	return YES;
+- (BOOL) addProfessorWithSalary:(double)salaryIn andTenured:(BOOL)tenuredIn andDept:(NSString *)deptIn andFirstName:(NSString *)firstNameIn andLastName:(NSString *)lastNameIn andID:(int)idIn{
+    if(![self findPerson:idIn]){
+        [list addObject: [[Professor alloc] initWithFirstName:firstNameIn andLastName:lastNameIn andID:idIn andTenured:tenuredIn andSalary:salaryIn andDept:deptIn]];
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL) addStudentWithMajor:(NSString *)majorIn andYear:(int)yearIn andGpa:(double)gpaIn andFirstName:(NSString *)firstNameIn andLastName:(NSString *)lastNameIn andID:(int)idIn{
+    if(![self findPerson:idIn]){
+        [list addObject:[[Student alloc] initWithFirstName:firstNameIn andLastName:lastNameIn andID:idIn andMajor:majorIn andYear:yearIn andGPA:gpaIn]];
+        return YES;
+    }
+    return NO;
 }
 
 - (BOOL) removePerson: (int) IDin;
@@ -50,11 +61,11 @@
     
     for (int i = 0; i < [list count]; i++){
         if ([[list objectAtIndex: i] ID] == IDin){
-           NSLog(@"%@", [list objectAtIndex: i]);
+            NSLog(@"%@", [list objectAtIndex: i]);
             return YES;
         }
     }
-
+    
     return NO;
 }
 
@@ -70,31 +81,31 @@
 
 - (BOOL) printList{
     /*
-    for (int i = 0; i < [list count]; i++){
-        NSLog(@"Persons %@", [[list objectAtIndex:i] firstName]);
-        return YES;
-    }
-    */
+     for (int i = 0; i < [list count]; i++){
+     NSLog(@"Persons %@", [[list objectAtIndex:i] firstName]);
+     return YES;
+     }
+     */
     NSString *object1;
     for (int i = 0; i < [list count]; i++){
         object1 =[[list objectAtIndex:0] firstName];
         NSLog(@"Persons:%@", object1);
         return YES;
     }
-
-
+    
+    
     return NO;
     
 }
 /*
-- (NSString *) description
-{
-    NSString *object1;
-    for (int i = 0; i < [list count]; i++)
-        object1 =[[list objectAtIndex:i] firstName];
-    
-    return(@"Persons:", object1);
-}  // description
-*/
+ - (NSString *) description
+ {
+ NSString *object1;
+ for (int i = 0; i < [list count]; i++)
+ object1 =[[list objectAtIndex:i] firstName];
+ 
+ return(@"Persons:", object1);
+ }  // description
+ */
 
 @end

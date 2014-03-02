@@ -15,21 +15,11 @@
 
 #import "Person.h"
 
-@interface Professor : Person{
-    BOOL isFaculty;
-    double salary;
-    BOOL tenure;
-    NSString *department;
-}
-
-@property (nonatomic, retain) NSString *firstName;
-@property (nonatomic, retain) NSString *lastName;
-@property (nonatomic, assign) int ID;
-@property (nonatomic, assign) BOOL isFaculty;
+@interface Professor : Person
 @property (nonatomic, assign) double salary;
 @property (nonatomic, assign) BOOL tenure;
 @property (nonatomic, retain) NSString *department;
 
-- (id) initWithFirstName: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) IDin andTenured: (BOOL) tenuredIn;
-                              
+- (id) initWithFirstName: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) IDin andTenured: (BOOL) tenuredIn andSalary:(double) salaryIn andDept: (NSString *) deptIn;
+
 @end

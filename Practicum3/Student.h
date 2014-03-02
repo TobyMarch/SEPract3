@@ -14,21 +14,11 @@
 #import <Foundation/Foundation.h>
 #import "Person.h"
 
-@interface Student : Person{
-    BOOL isFaculty;
-    double gpa;
-    int gradYear;
-    NSString *major;
-}
-
-@property (nonatomic, retain) NSString *firstName;
-@property (nonatomic, retain) NSString *lastName;
-@property (nonatomic, assign) int ID;
-@property (nonatomic, assign) BOOL isFaculty;
+@interface Student : Person
 @property (nonatomic, assign) double gpa;
 @property (nonatomic, assign) int gradYear;
 @property (nonatomic, retain) NSString *major;
 
-- (id) initWithFirstName: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) idIn;
+- (id) initWithFirstName: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) idIn andMajor: (NSString *) majorIn andYear: (int) yearIn andGPA: (double) gpaIn;
 
 @end
