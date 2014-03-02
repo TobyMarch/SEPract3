@@ -62,9 +62,12 @@
     //Code to modify a person here!
     int idValue = self.idIn.text.intValue;
     if ([list findPerson:idValue]) {
+        //Should check before pushing the modal view
+        //After check, returnPerson from PersonList, and populate the modify Modal
+        
     }
     else {
-        
+        //Error message here
     }
 }
 
