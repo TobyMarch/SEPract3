@@ -237,33 +237,20 @@
                                     <action selector="findPerson:" destination="wd6-Yg-YSi" eventType="touchUpInside" id="1OJ-jr-a9G"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Placeholder for Persons information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="175" translatesAutoresizingMaskIntoConstraints="NO" id="90O-qq-uZu">
-                                <rect key="frame" x="69" y="297" width="175" height="134"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="134" id="2Lk-Wc-rGl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ObA-mk-CZi" firstAttribute="top" secondItem="GFg-Tm-KvW" secondAttribute="top" constant="54" id="07Y-He-TFe"/>
-                            <constraint firstAttribute="bottom" secondItem="90O-qq-uZu" secondAttribute="bottom" constant="73" id="2ve-Bq-hOQ"/>
-                            <constraint firstItem="90O-qq-uZu" firstAttribute="leading" secondItem="98C-ZL-jaw" secondAttribute="leading" type="default" id="KY1-6h-0oW"/>
                             <constraint firstItem="U9y-PC-FnI" firstAttribute="top" secondItem="GFg-Tm-KvW" secondAttribute="top" constant="191" id="Tne-fq-KP9"/>
                             <constraint firstItem="U9y-PC-FnI" firstAttribute="centerX" secondItem="98C-ZL-jaw" secondAttribute="centerX" type="default" id="UxB-C6-zF3"/>
                             <constraint firstItem="98C-ZL-jaw" firstAttribute="centerX" secondItem="ObA-mk-CZi" secondAttribute="centerX" type="default" id="X0O-4V-eMl"/>
                             <constraint firstItem="ObA-mk-CZi" firstAttribute="leading" secondItem="GFg-Tm-KvW" secondAttribute="leading" constant="11" id="XRX-jU-pmE"/>
-                            <constraint firstItem="98C-ZL-jaw" firstAttribute="trailing" secondItem="90O-qq-uZu" secondAttribute="trailing" type="default" id="YhN-Wg-ko3"/>
                             <constraint firstItem="98C-ZL-jaw" firstAttribute="top" secondItem="GFg-Tm-KvW" secondAttribute="top" constant="145" id="bWw-UM-LZD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Find Person" id="vd1-TO-DKa"/>
                     <connections>
                         <outlet property="idIn" destination="98C-ZL-jaw" id="Ojj-hW-H7X"/>
-                        <outlet property="informationLabel" destination="90O-qq-uZu" id="Uy0-hI-nS3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7nA-YB-DcB" userLabel="First Responder" sceneMemberID="firstResponder"/>

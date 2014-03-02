@@ -78,7 +78,8 @@
         [self.navigationController pushViewController:detail animated:YES];
     }
     else {
-        self.informationLabel.text = @"Person Not Found!";
+        UIAlertView *failed = [[UIAlertView alloc] initWithTitle:@"Find Failed" message:@"No person with that ID found" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [failed show];
     }
 }
 
