@@ -29,6 +29,11 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.list = [[SEListSingleton sharedList] getList];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -42,7 +47,12 @@
 }
 
 - (IBAction)removePerson:(UIButton *)sender {
-    //Insert code to perform removal of a person here
+    if([_list removePerson:self.idInput.text.intValue]){
+        [self.resultsLabel setText:@"Person Removed!"];
+    }
+    else{
+        [self.resultsLabel setText:@"Person Not Found!"];
+    }
 }
 
 //Purpose: Hides the keyboards of the text fields on the current view whenever a user touches anywhere outside the keyboard
