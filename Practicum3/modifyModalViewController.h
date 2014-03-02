@@ -41,7 +41,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *departmentLabel;
 
 //Singleton guided List object
-@property (weak, nonatomic) PersonList *list;
+//@property (weak, nonatomic) PersonList *list;
 
 
 //Methods
