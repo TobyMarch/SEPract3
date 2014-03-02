@@ -28,16 +28,10 @@
 
 - (id)init;
 
-/*
- Function: addPerson
- Purpose: Create node holding person passed in and add it to list
- Inputs: Person* personIn - person to be added to list
- Outputs: BOOL - YES if successful, NO if not
- Properties modified: Creates Person object, adds to array.
- Precondition: None
- */
 
-- (BOOL) addPerson: (Person*) personIn;
+- (BOOL) addProfessorWithSalary:(double)salaryIn andTenured:(BOOL)tenuredIn andDept:(NSString*)deptIn andFirstName:(NSString *)firstNameIn andLastName:(NSString *)lastNameIn andID:(int)idIn;
+
+- (BOOL) addStudentWithMajor: (NSString *)majorIn andYear:(int)yearIn andGpa:(double)gpaIn andFirstName:(NSString *)firstNameIn andLastName:(NSString *)lastNameIn andID:(int)idIn;
 
 /*
  Function: removePerson
@@ -53,11 +47,11 @@
  * Function: findPerson
  * Purpose: indicates whether entry with given ID exists within the list
  * Input:
-        int IDin - integer value of entry's ID number
+ int IDin - integer value of entry's ID number
  * Output:
-        bool value YES if found, NO if not
+ bool value YES if found, NO if not
  * Properties Modified:
-        none
+ none
  */
 - (BOOL) findPerson: (int) IDin;
 

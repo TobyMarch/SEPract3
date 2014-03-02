@@ -13,7 +13,8 @@
 #import "Student.h"
 
 @implementation Student
-@synthesize gpa, gradYear, major, isFaculty;
+
+@synthesize major, gpa, gradYear;
 /*
  method: Student Constructor
  purpose:  Create an instance of a Student object
@@ -29,12 +30,11 @@
  no Student specific attributes set initially
  */
 
-- (id) initWithFirstName: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) idIn;
-{
-	if (self = [super init]) {
-		firstName = @"";
-		lastName = @"";
-		ID = 0;
+- (id) initWithFirstName: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) idIn andMajor:(NSString *)majorIn andYear:(int)yearIn andGPA:(double)gpaIn;{
+	if (self = [super initWithfName:firstNameIn andlName:lastNameIn andID:idIn]) {
+		major = majorIn;
+        gpa = gpaIn;
+        gradYear = yearIn;
         
 		return (self);
 	}
