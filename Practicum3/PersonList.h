@@ -49,9 +49,24 @@
  */
 - (BOOL) removePerson: (int) IDin;
 
+/*
+ * Function: findPerson
+ * Purpose: indicates whether entry with given ID exists within the list
+ * Input:
+        int IDin - integer value of entry's ID number
+ * Output:
+        bool value YES if found, NO if not
+ * Properties Modified:
+        none
+ */
 - (BOOL) findPerson: (int) IDin;
 
+/*
+ * Function: returnPerson
+ */
 - (id) returnPerson: (int) IDin;
+
+
 
 - (BOOL) printList;
 
