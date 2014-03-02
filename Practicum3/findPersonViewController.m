@@ -19,6 +19,8 @@
 
 @implementation findPersonViewController
 
+@synthesize list;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
@@ -53,7 +55,32 @@
 //Output: Person information into informationLabel Label
 //Properties Modified: None
 - (IBAction)findPerson:(id)sender {
-    //Code for finding a person here!
+    int idValue = self.idIn.text.intValue;
+    
+    //If an entry with that ID exists, create new DetailViewController to display information
+    if ([list findPerson:idValue]) {
+        //Create new UIViewController to display entry details
+        UIViewController *detail;
+        //Determine class of found entry
+        NSString *entryClass = [NSString stringWithFormat:@"%@", [[list returnPerson:idValue] class]];
+        //if ([[[list returnPerson:idValue] class] isEqualToString: @"Student"]) {
+        if ([entryClass isEqualToString:@"Student"]) {
+            self.informationLabel.text = @"Student Found!";
+            detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentDetail"];
+        }
+        else {
+            self.informationLabel.text = @"Professor Found!";
+            detail = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfessorDetail"];
+        }
+        //Set title of new UIViewController to the id of the entry
+        NSString *title = [NSString stringWithFormat:@"%d",idValue];
+        detail.title = title;
+        //Push UIViewController
+        [self.navigationController pushViewController:detail animated:YES];
+    }
+    else {
+        self.informationLabel.text = @"Person Not Found!";
+    }
 }
 
 
