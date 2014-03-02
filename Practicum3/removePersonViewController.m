@@ -47,11 +47,20 @@
 }
 
 - (IBAction)removePerson:(UIButton *)sender {
+    UIAlertView *result = [UIAlertView alloc];
     if([_list removePerson:self.idInput.text.intValue]){
-        [self.resultsLabel setText:@"Person Removed!"];
+        result = [result initWithTitle:@"Success!" message:@"Person successfully removed" delegate:self cancelButtonTitle:@"Great!" otherButtonTitles:nil, nil];
+        [result show];
     }
     else{
-        [self.resultsLabel setText:@"Person Not Found!"];
+        result = [result initWithTitle:@"Failed" message:@"No person with that ID found" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [result show];
+    }
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if ([alertView.title isEqualToString:@"Success!"]){
+        [self.navigationController popToRootViewControllerAnimated:YES];
     }
 }
 

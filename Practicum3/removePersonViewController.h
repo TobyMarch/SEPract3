@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SEListSingleton.h"
 
-@interface removePersonViewController : UIViewController
+@interface removePersonViewController : UIViewController <UIAlertViewDelegate>
 
 //Properties
 @property (weak, nonatomic) IBOutlet UITextField *idInput;
