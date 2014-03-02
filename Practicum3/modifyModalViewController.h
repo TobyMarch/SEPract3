@@ -1,15 +1,14 @@
 //
-//  addPersonViewController.h
-//  TestSegues
-//  .h File for the addPerson View. 
+//  modifyModalViewController.h
+//  Practicum3
 //
-//  Created by Chris Kondrat on 2/27/14.
-//  Copyright (c) 2014 Team Mojave All rights reserved.
+//  Created by lab on 3/2/14.
+//  Copyright (c) 2014 Ithaca College. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "SEListSingleton.h"
-@interface addPersonViewController : UIViewController
+
+@interface modifyModalViewController : UIViewController
 
 //Properties hinging on the Person class
 @property (weak, nonatomic) IBOutlet UITextField *firstName; //Text Field which holds Persons First Name
@@ -45,11 +44,9 @@
 @property (weak, nonatomic) PersonList *list;
 
 
-
 //Methods
 - (IBAction)sliderChange:(UISlider *)sender;
-- (IBAction)toggleType:(UISegmentedControl *)sender;
-- (IBAction)createPerson:(id)sender;
+- (IBAction)modifyPerson:(id)sender;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 
 @end
