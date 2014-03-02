@@ -46,7 +46,7 @@
 }
 
 
-- (BOOL) find: (int) IDin{
+- (BOOL) findPerson: (int) IDin{
     
     for (int i = 0; i < [list count]; i++){
         if ([[list objectAtIndex: i] ID] == IDin){

@@ -49,7 +49,7 @@
  */
 - (BOOL) removePerson: (int) IDin;
 
-- (BOOL) find: (int) IDin;
+- (BOOL) findPerson: (int) IDin;
 
 - (id) returnPerson: (int) IDin;
 
