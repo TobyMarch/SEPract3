@@ -2,13 +2,17 @@
 //  allPeopleTableViewController.m
 //  Practicum3
 //
-//  Created by Calvin Chestnut on 2/28/14.
-//  Copyright (c) 2014 Ithaca College. All rights reserved.
+//  Description: Dispays a TableView populated by all People in shared PersonList
+//  Created by Calvin Chestnut
+//  Partners: Toby March, Chris Kondrat, John Huttlinger
 //
-//  Displays all People currently stored in the PersonListSingleton
-//  Has one section, and as many rows as there are People in the PersonList
-//  Each cell is populated with the Person's information, and returned to the TableView to draw
-//  On select the Cell currently does nothing
+//  Algorithm:
+//      Gets the sharedList
+//      Creates a table with one section
+//      Creates a Row for each Person in PersonList
+//      Sets the Row's Title with the Person's first and last name
+//      Sets the Row's subtitle with the Person Type and their ID number
+//      Handles Row selection
 //
 
 #import "allPeopleTableViewController.h"
@@ -31,6 +35,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+    //Sets the list attribute to the SharedList in the SEListSingleton
     list = [[SEListSingleton sharedList] getList];
 }
 
@@ -73,7 +78,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    //PersonCell is the identifier of the Cell Template I made in the Storyboard
+    //PersonCell is the identifier of the Cell Template in the Storyboard
     static NSString *CellIdentifier = @"PersonCell";
     //Creates new cell instance from the Reusable Cell Template PersonCell
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
@@ -96,23 +101,36 @@
 }
 
 /*
-    This is where we can do custom actions on click
+   This function responds to Row Selection
  
 */
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
+    //Creates a new ViewController to be called
     UIViewController *detail;
+    
+    //Checks if Person selected is a Student or Professor
     if ([[[list list] objectAtIndex:indexPath.row] isKindOfClass:[Student class]]){
+        //If student
         
+        //Detail inherits from VC StudentDetail
         detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentDetail"];
     } else {
+        //If professor
+        
+        //Detail inherits from VC ProfessorDetail
         detail = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfessorDetail"];
     }
+    
+    //Sets title of the new view to the Person's ID
+    //Will be used to gather Person data in the new ViewController
     NSString *title = [NSString stringWithFormat:@"%d",[[[list list] objectAtIndex:indexPath.row] ID]];
     detail.title = title;
     
+    //Tells the navigationController to push the Detail view
     [self.navigationController pushViewController:detail animated:YES];
     
+    //Animate Row deselection
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
