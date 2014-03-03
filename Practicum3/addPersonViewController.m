@@ -60,9 +60,21 @@
  * Properties Modified: sliderValue's text field
  */
 - (IBAction)sliderChange:(UISlider *)sender {
-        double value = sender.value;
-        self.sliderValue.text = [NSString stringWithFormat:@"%.1f", value];
+    double value = sender.value;
+    self.sliderValue.text = [NSString stringWithFormat:@"%.1f", value];
+    
+}
 
+/**
+ * Purpose: Updates slider position to match TextField
+ * Input: UITextField
+ * Output: none
+ * Properties Modified: MainSlider's value
+ */
+- (IBAction)textChanged:(UITextField *)sender {
+    double value = sender.text.doubleValue;
+    self.mainSlider.value = value;
+    
 }
 
 /**

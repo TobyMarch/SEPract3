@@ -50,6 +50,7 @@
 
 //Methods
 - (IBAction)sliderChange:(UISlider *)sender;
+- (IBAction)textChanged:(UITextField *)sender;
 - (IBAction)toggleType:(UISegmentedControl *)sender;
 - (IBAction)createPerson:(id)sender;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
