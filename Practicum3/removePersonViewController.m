@@ -1,11 +1,10 @@
 //
-///removePersonViewController.m
-///Practicum 3
-///Description: removePersonViewController class
-///Created by John Huttlinger
-///Partners: Chris Kondrat, TOby March, Calvin Chestnut
-///
-///Algorithim:
+/// removePersonViewController.m
+/// Practicum 3
+/// Description: removePersonViewController class
+/// Created by John Huttlinger
+/// Partners: Chris Kondrat, TOby March, Calvin Chestnut
+/// Algorithim:
 ///     Manages the removePerson View based on users interaction with the window
 ///     This views code focuses primarily on retrieving user input from the text field named idInput
 ///     and removing the individual (should he/she exist in the list at the time) for the roster when
@@ -71,11 +70,17 @@
     }
 }
 
-//Purpose: Hides the keyboards of the text fields on the current view whenever a user touches anywhere outside the keyboard
-//when entering text/numbers into any text field SOLELY on this view
-//Input: User touch
-//Output: None
-//Properties Modified: None
+/**
+ * Function: touchesBegan
+ * Purpose: Hides the keyboards of the text fields on the current view whenever a user touches
+ *      anywhere outside the keyboard when entering text/numbers into any text field SOLELY on this view
+ * Input:
+ *      User touch
+ * Output:
+ *      none
+ * Properties Modified:
+ *      none
+ */
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [_idInput resignFirstResponder];
 }

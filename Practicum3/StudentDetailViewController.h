@@ -1,10 +1,9 @@
-//
-//  StudentDetailViewController.h
-//  Practicum3
-//
-//  Created by Calvin Chestnut on 2/28/14.
-//  Copyright (c) 2014 Ithaca College. All rights reserved.
-//  Something weird is going on
+///
+///  StudentDetailViewController.h
+///  Practicum3
+///  Created by Calvin Chestnut on 2/28/14.
+///  Copyright (c) 2014 Ithaca College. All rights reserved.
+///
 
 #import <UIKit/UIKit.h>
 #import "SEListSingleton.h"

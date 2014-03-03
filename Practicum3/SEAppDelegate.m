@@ -1,10 +1,9 @@
-//
-//  SEAppDelegate.m
-//  Practicum3
-//
-//  Created by Toby March on 2/27/14.
-//  Copyright (c) 2014 Ithaca College. All rights reserved.
-//
+///
+///  SEAppDelegate.m
+///  Practicum3
+///  Created by Toby March on 2/27/14.
+///  Copyright (c) 2014 Ithaca College. All rights reserved.
+///
 
 #import "SEAppDelegate.h"
 

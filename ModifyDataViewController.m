@@ -2,16 +2,17 @@
 //  ModifyDataViewController.m
 //  Practicum3
 //
-//  Description: Displays fields to allow editing of existing Person and save changes
-//  Created by Calvin Chestnut
-//  Partners: Toby March, Chris Kondrat, John Huttlinger
-//
-//  Algorithm:
-//      Subclass of AddPersonViewController
-//      When preparing the View, will initialize all fields with existing Person data
-//      Runs the same checks as AddPersonViewController
-//      On Submit, will delete existing user and replace with user with updated data
-//
+///
+/// ModifyDataViewController.m
+///  Description: Displays fields to allow editing of existing Person and save changes
+///  Created by Calvin Chestnut
+///  Partners: Toby March, Chris Kondrat, John Huttlinger
+///  Algorithm:
+///      Subclass of AddPersonViewController
+///      When preparing the View, will initialize all fields with existing Person data
+///      Runs the same checks as AddPersonViewController
+///      On Submit, will delete existing user and replace with user with updated data
+///
 
 #import "ModifyDataViewController.h"
 
@@ -30,6 +31,16 @@
     return self;
 }
 
+/**
+ * Function: viewWillAppear:
+ * Purpose: Runs when view loaded into memory, prepares to populate modify interface
+ * Input:
+ *      BOOL animated
+ * Output:
+ *      none
+ * Properties Modified:
+ *      none
+ */
 -(void) viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
@@ -87,9 +98,16 @@
     [self.idNumber setText:[NSString stringWithFormat:@"%d",[thePerson ID]]];
 }
 
-//Overrides addPersonViewController's createPerson method.
-//Only one change
-//Deletes person being modified before adding again with changes
+/**
+ * Function: viewWillAppear:
+ * Purpose: Overrides addPersonViewController, Deletes person being modified before adding again with changes
+ * Input:
+ *      id sender
+ * Output:
+ *      none, but IBAction
+ * Properties Modified:
+ *      personList
+ */
 - (IBAction)createPerson:(id)sender {
     BOOL added=NO;
     BOOL emptyField=NO;

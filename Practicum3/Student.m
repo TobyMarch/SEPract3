@@ -1,15 +1,12 @@
 ///
-///Person.h
-///Practicum 3
-///Description: Student class
-///Created by Calvin Chestnut
-///Refractored by John Huttlinger
-///Partners: John Huttlinger, Toby March, Calvin Chestnut
-///
-///Modifications:
+/// Person.h
+/// Practicum 3
+/// Description: Student class
+/// Created by Calvin Chestnut
+/// Refractored by John Huttlinger
+/// Partners: John Huttlinger, Toby March, Calvin Chestnut
+/// Modifications:
 ///     Removed unused method. Removed unused variables. Modified constructor
-///Algorithim:
-///
 ///
 
 #import "Student.h"

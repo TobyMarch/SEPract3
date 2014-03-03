@@ -1,15 +1,13 @@
-//
-//  findPersonViewController.m
-//  TestSegues
-//
-//  Created by Chris Kondrat on 2/27/14.
-//  Copyright (c) 2014 Team Mojave All rights reserved.
-//
-// Manages the findPerson View based on users interaction with the window
-// This views code focuses primarily on retrieving user input from the text field named idInput
-// and finding a Person object with the corresponding ID when the UI Button on this view is pressed down.
-// The information is then printed off into the Label called informationLabel
-//
+///
+///  findPersonViewController.m
+///  TestSegues
+///  Created by Chris Kondrat on 2/27/14.
+///  Copyright (c) 2014 Team Mojave All rights reserved.
+/// Manages the findPerson View based on users interaction with the window
+/// This views code focuses primarily on retrieving user input from the text field named idInput
+/// and finding a Person object with the corresponding ID when the UI Button on this view is pressed down.
+/// The information is then printed off into the Label called informationLabel
+///
 
 #import "findPersonViewController.h"
 
@@ -30,10 +28,14 @@
 }
 
 /**
- * Purpose:              Makes sure that the List object is always available on load
- * Input:                none
- * Output:               none
- * Properties Modified:  list
+ * Function: viewWillAppear:
+ * Purpose: Makes sure that the List object is always available on load
+ * Input:
+ *      BOOL animated
+ * Output:
+ *      none
+ * Properties Modified:
+ *      list
  */
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -53,10 +55,14 @@
 
 
 /**
+ * Function: findPerson:
  * Purpose: Finds a Persons information based on user inputted ID Number
- * Input: ID Number in the idIn TextField
- * Output: Person information into informationLabel Label
- * Properties Modified: None
+ * Input: 
+ *      ID Number in the idIn TextField
+ * Output: 
+ *      Person information into informationLabel Label
+ * Properties Modified: 
+ *      none
  */
 - (IBAction)findPerson:(id)sender {
     int idValue = self.idIn.text.intValue;
@@ -92,10 +98,14 @@
 
 
 /**
+ * Function: touchesBegan:
  * Purpose: Hides the keyboards of the text fields on the current view whenever a user touches anywhere outside the keyboard when entering text/numbers into any text field SOLELY on this view
- * Input: User touch
- * Output: None
- * Properties Modified: None
+ * Input: 
+ *      NSSet
+ * Output: 
+ *      none
+ * Properties Modified: 
+ *      none
  */
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{

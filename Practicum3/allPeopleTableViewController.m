@@ -1,19 +1,17 @@
-//
-//  allPeopleTableViewController.m
-//  Practicum3
-//
-//  Description: Dispays a TableView populated by all People in shared PersonList
-//  Created by Calvin Chestnut
-//  Partners: Toby March, Chris Kondrat, John Huttlinger
-//
-//  Algorithm:
-//      Gets the sharedList
-//      Creates a table with one section
-//      Creates a Row for each Person in PersonList
-//      Sets the Row's Title with the Person's first and last name
-//      Sets the Row's subtitle with the Person Type and their ID number
-//      Handles Row selection
-//
+///
+///  allPeopleTableViewController.m
+///  Practicum3
+///  Description: Dispays a TableView populated by all People in shared PersonList
+///  Created by Calvin Chestnut
+///  Partners: Toby March, Chris Kondrat, John Huttlinger
+///  Algorithm:
+///      Gets the sharedList
+///      Creates a table with one section
+///      Creates a Row for each Person in PersonList
+///      Sets the Row's Title with the Person's first and last name
+///      Sets the Row's subtitle with the Person Type and their ID number
+///      Handles Row selection
+///
 
 #import "allPeopleTableViewController.h"
 
@@ -34,6 +32,16 @@
     return self;
 }
 
+/**
+ * Function: viewWillAppear:
+ * Purpose: Makes sure that the List object is always available on load
+ * Input:
+ *      BOOL animated
+ * Output:
+ *      none
+ * Properties Modified:
+ *      list
+ */
 -(void)viewWillAppear:(BOOL)animated{
     //Sets the list attribute to the SharedList in the SEListSingleton
     list = [[SEListSingleton sharedList] getList];
@@ -43,11 +51,6 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,10 +73,16 @@
     return list.list.count;
 }
 
-/*
- tableView: cellForRowAtIndexPath;
- Returns a UITableViewCell to the table view to insert
- References the PersonList in the Singleton for Data
+/**
+ * Function: tableView: cellForRowAtIndexPath;
+ * Purpose: References PersonList and fills a UITableViewCell to the table view to insert
+ * Input:
+ *      UITableView
+ *      NSIndexPath
+ * Output:
+ *      UITableViewCell
+ * Properties Modified:
+ *      none
 */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -100,8 +109,16 @@
     return cell;
 }
 
-/*
-   This function responds to Row Selection
+/**
+ * Function: tableView: didSelectRowAtIndexPath:
+ * Purpose: This function responds to Row Selection
+ * Input:
+ *      UITableView
+ *      NSIndexPath
+ * Output:
+ *      none
+ * Properties Modified:
+ *      none
  
 */
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -134,55 +151,5 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 @end

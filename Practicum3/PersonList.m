@@ -1,15 +1,12 @@
 ///
-///Person.h
-///Practicum 3
-///Description: Header file for PersonList class
-///Created by John Huttlinger
-///Refactored by John Huttlinger
-///Partners: Chris Kondrat, Toby March, Calvin Chestnut
-///
-///Modifications:
+/// Person.h
+/// Practicum 3
+/// Description: Header file for PersonList class
+/// Created by John Huttlinger
+/// Refactored by John Huttlinger
+/// Partners: Chris Kondrat, Toby March, Calvin Chestnut
+/// Modifications:
 ///     Removed useless method. Replaced with two new methods.
-///Algorithim:
-///     Manages list of Person objects
 ///
 
 #import "PersonList.h"

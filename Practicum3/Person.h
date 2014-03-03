@@ -1,12 +1,9 @@
 ///
-///Person.h
-///Practicum 3
-///Description: Header file for Person class
-///Created by Chris Kondrat
-///Partners: John Huttlinger, Toby March, Calvin Chestnut
-///
-///Algorithim:
-///
+/// Person.h
+/// Practicum 3
+/// Description: Header file for Person class
+/// Created by Chris Kondrat
+/// Partners: John Huttlinger, Toby March, Calvin Chestnut
 ///
 
 #import <Foundation/Foundation.h>

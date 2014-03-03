@@ -1,11 +1,10 @@
 //
-//  ViewController.m
-//  TestSegues
-//  .m file for the Main Menu view
-//
-//  Created by Chris Kondrat on 2/27/14.
-//  Copyright (c) 2014 Team Mojave All rights reserved.
-//
+/// ViewController.m
+/// Practicum3
+/// .m file for the Main Menu view
+/// Created by Chris Kondrat on 2/27/14.
+/// Copyright (c) 2014 Team Mojave All rights reserved.
+///
 
 #import "ViewController.h"
 #import "SEListSingleton.h"

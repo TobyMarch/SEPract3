@@ -1,10 +1,9 @@
-//
-//  ProfessorDetailViewController.m
-//  Practicum3
-//
-//  Created by Calvin Chestnut on 2/28/14.
-//  Copyright (c) 2014 Ithaca College. All rights reserved.
-//
+///
+/// ProfessorDetailViewController.m
+/// Practicum3
+/// Created by Calvin Chestnut on 2/28/14.
+/// Copyright (c) 2014 Ithaca College. All rights reserved.
+///
 
 #import "ProfessorDetailViewController.h"
 
@@ -24,7 +23,16 @@
     }
     return self;
 }
-
+/**
+ * Function: viewDidLoad
+ * Purpose: runs after view loaded into memory, populated detail view
+ * Input:
+        none
+ * Output:
+        none
+ * Properties Modified:
+        none
+ */
 - (void)viewDidLoad
 {
     [super viewDidLoad];

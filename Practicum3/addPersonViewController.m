@@ -1,22 +1,20 @@
-//
-//  addPersonViewController.m
-//  TestSegues
-//
-//  Created by Chris Kondrat on 2/27/14.
-//  Copyright (c) 2014 Team Mojave All rights reserved.
-//
-// Manages the addPerson View based on users interaction with the window
-// Depending on which object clicked on in the View, an action will be performed
-// corresponding to whatever action is bound to said object. This codes view focuses
-// primarily on retrieving information for the creation of a Person who is either a
-// professor or a student. 
-//
+///
+/// addPersonViewController.m
+/// Practicum3
+/// Created by Chris Kondrat on 2/27/14.
+/// Copyright (c) 2014 Team Mojave All rights reserved.
+/// Manages the addPerson View based on users interaction with the window
+/// Depending on which object clicked on in the View, an action will be performed
+/// corresponding to whatever action is bound to said object. This codes view focuses
+/// primarily on retrieving information for the creation of a Person who is either a
+/// professor or a student. 
+///
 
 #import "addPersonViewController.h"
 
-/*@interface addPersonViewController ()
+@interface addPersonViewController ()
 
-@end*/
+@end
 
 @implementation addPersonViewController
 
@@ -31,10 +29,14 @@
 }
 
 /**
- * Purpose:              Makes sure that the List object is always available on load
- * Input:                none
- * Output:               none
- * Properties Modified:  list
+ * Function: viewWillAppear
+ * Purpose: Makes sure that the List object is always available on load
+ * Input:
+ *      BOOL animated - usually set to yes, because we like things to look pretty
+ * Output:
+ *      none
+ * Properties Modified: 
+ *      list
  */
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -54,10 +56,14 @@
 }
 
 /**
+ * Function: sliderChange:
  * Purpose: Informs the user of what value the current slider position is
- * Input: Slider position
- * Output: Outputs value into the text field called sliderValue (located beneath the slider )
- * Properties Modified: sliderValue's text field
+ * Input: 
+ *      Slider position
+ * Output: 
+ *      Outputs value into the text field called sliderValue (located beneath the slider )
+ * Properties Modified: 
+ *      sliderValue's text field
  */
 - (IBAction)sliderChange:(UISlider *)sender {
     double value = sender.value;
@@ -66,10 +72,14 @@
 }
 
 /**
+ * Function: textChanged:
  * Purpose: Updates slider position to match TextField
- * Input: UITextField
- * Output: none
- * Properties Modified: MainSlider's value
+ * Input: 
+ *      UITextField
+ * Output: 
+ *      none
+ * Properties Modified: 
+ *      MainSlider's value
  */
 - (IBAction)textChanged:(UITextField *)sender {
     double value = sender.text.doubleValue;
@@ -78,12 +88,16 @@
 }
 
 /**
+ * Function: toggleType:
  * Purpose: Hides and Shows certain labels and text boxes based on which object you are creating
- * Input: Position of the Segmented Controller
- * Output: Shows/Hides certain UI components based on the Segmented Controllers position
- * Properties Modified: All labels that pertain to either a student or a professor, UI slider values, show/hidden status of all objects pertaining to students or professors
+ * Input: 
+ *      Position of the Segmented Controller
+ * Output: 
+ *      Shows/Hides certain UI components based on the Segmented Controllers position
+ * Properties Modified: 
+ *      All labels that pertain to either a student or a professor, UI slider values, show/hidden 
+ *      status of all objects pertaining to students or professors
  */
-
 - (IBAction)toggleType:(UISegmentedControl* )sender {
     if(sender.selectedSegmentIndex == 0){
         self.graduationYear.hidden = NO;
@@ -120,10 +134,16 @@
 }
 
 /**
+ * Function createPerson:
  * Purpose: Creates a person to be added to the list
- * Input: First Name, Last Name and ID number for both Professor and Student. Graduation Year, Major and GPA for Students. Salary, Tenure Status and Department for Professors.
- * Output: A Person object that is either a Professor or a Student that is added to the list
- * Properties Modified: None
+ * Input: 
+ *      First Name, Last Name and ID number for both Professor and Student. 
+ *      Graduation Year, Major and GPA for Students. 
+ *      Salary, Tenure Status and Department for Professors.
+ * Output: 
+ *      A Person object that is either a Professor or a Student that is added to the list
+ * Properties Modified: 
+ *      None
  */
 - (IBAction)createPerson:(id)sender {
     BOOL added=NO;
@@ -158,15 +178,19 @@
         UIAlertView *successAlert = [[UIAlertView alloc] initWithTitle:@"Added Person" message:[NSString stringWithFormat:@"%@ added!", self.firstName.text] delegate:self cancelButtonTitle:@"OK!" otherButtonTitles:nil, nil];
         [successAlert show];
     }
-    //An 'else' case is needed here, but I don't know how to implement it yet
     
 }
 
 /**
+ * alertView:
  * Purpose: Dismisses view when alert is responded to
- * Input: buttonIndex, alertViewPressed
- * Output: none
- * Properties modified: dismisses current ViewController
+ * Input: 
+ *      buttonIndex
+ *      alertViewPressed
+ * Output: 
+ *      none
+ * Properties modified: 
+ *      dismisses current ViewController
  */
 -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if ([alertView.title isEqualToString:@"Added Person"]){
@@ -175,10 +199,14 @@
 }
 
 /**
- *Purpose: Hides the keyboards of the text fields on the current view whenever a user touches anywhere outside the keyboard when entering text/numbers into any text field SOLELY on this view
- * Input: User touch
- * Output: None
- * Properties Modified: None
+ * Function: touchesBegan
+ * Purpose: Hides the keyboards of the text fields on the current view whenever a user touches anywhere outside the keyboard when entering text/numbers into any text field SOLELY on this view
+ * Input: 
+ *      none
+ * Output: 
+ *      none
+ * Properties Modified: 
+ *      none
  */
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [_firstName resignFirstResponder];
