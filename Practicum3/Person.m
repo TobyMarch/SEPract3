@@ -1,18 +1,30 @@
-//
-//  Person.m
-//  hello-obj-c-classes
-//
-//  Created by lab on 2/6/14.
-//  Copyright (c) 2014 Ithaca College. All rights reserved.
-//
+///
+///Person.h
+///Practicum 3
+///Description: Header file for Person class
+///Created by Chris Kondrat
+///Partners: John Huttlinger, Toby March, Calvin Chestnut
+///
+///Algorithim:
+///
+///
 
 #import "Person.h"
 
 @implementation Person
 @synthesize firstName, lastName, ID;
 
-- (id) init
-{
+/**
+ * Function: init
+ * Purpose: Default constructor
+ * Inputs:
+        none
+ * Output:
+        id self - instance of Person class
+ * Properties modified:
+        firstName, lastName, ID
+ */
+- (id) init{
 	self = [super init];
 	if (self) {
 		firstName = @"";
@@ -22,6 +34,19 @@
 	return self;
 }
 
+
+/**
+ * Function: initWithfName
+ * Purpose: Constructor
+ * Inputs:
+        NSString* firstNameIn - First name
+        NSString* lastNameIn - Last name
+        int IDin - ID number
+ * Output:
+        id self - instance of Person class
+ * Properties modified:
+        firstName, lastName, ID
+ */
 -(id) initWithfName:(NSString *)firstNameIn andlName:(NSString *)lastNameIn andID:(int)IDin
 {
 	self = [super init];

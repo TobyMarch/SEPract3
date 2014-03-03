@@ -1,15 +1,16 @@
-//
-//  Professor.h
-//  Practicum 1
-//
-//  Created by Calvin Chestnut
-//  Partners: Toby March, Chris Kondrat, John Huttlinger
-//
-//  This file defines the Professor class, which extends the Person class, and it's attributes and methods
-//
-//  The attributes firstName, lastName, and id are stored in the Person class
-//  The six methods defined override virtual methods in the Person class
-//
+///
+///Person.h
+///Practicum 3
+///Description: Header file for Professor class
+///Created by Calvin Chestnut
+///Refractored by John Huttlinger
+///Partners: John Huttlinger, Toby March, Calvin Chestnut
+///
+///Modifications:
+///     Removed unused method. Removed unused variables. Modified constructor
+///Algorithim:
+///
+///
 
 #import <Foundation/Foundation.h>
 

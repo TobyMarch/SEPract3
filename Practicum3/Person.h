@@ -1,10 +1,13 @@
-//
-//  Person.h
-//  hello-obj-c-classes
-//
-//  Created by lab on 2/6/14.
-//  Copyright (c) 2014 Ithaca College. All rights reserved.
-//
+///
+///Person.h
+///Practicum 3
+///Description: Header file for Person class
+///Created by Chris Kondrat
+///Partners: John Huttlinger, Toby March, Calvin Chestnut
+///
+///Algorithim:
+///
+///
 
 #import <Foundation/Foundation.h>
 

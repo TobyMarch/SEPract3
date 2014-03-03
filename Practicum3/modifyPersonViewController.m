@@ -34,10 +34,12 @@
     return self;
 }
 
-//Purpose:              Makes sure that the List object is always available on load
-//Input:                none
-//Output:               none
-//Properties Modified:  list
+/**
+ * Purpose:              Makes sure that the List object is always available on load
+ * Input:                none
+ * Output:               none
+ * Properties Modified:  list
+ */
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.list = [[SEListSingleton sharedList] getList];
@@ -55,10 +57,12 @@
     // Dispose of any resources that can be recreated.
 }
 
-//Purpose: Attempts to find a Person based on user inputed text in idIn text field to be modified
-//Input: ID Number into idIn TextField
-//Output: TBD
-//Properties Modified: None
+/**
+ * Purpose: Attempts to find a Person based on user inputed text in idIn text field to be modified
+ * Input: ID Number into idIn TextField
+ * Output: TBD
+ * Properties Modified: None
+ */
 - (IBAction)performMod:(UIButton *)sender {
     //Code to modify a person here!
     int idValue = self.idIn.text.intValue;
@@ -78,11 +82,12 @@
     }
 }
 
-//Purpose: Hides the keyboards of the text fields on the current view whenever a user touches anywhere outside the keyboard
-//when entering text/numbers into any text field SOLELY on this view
-//Input: User touch
-//Output: None
-//Properties Modified: None
+/**
+ * Purpose: Hides the keyboards of the text fields on the current view whenever a user touches anywhere outside the keyboard when entering text/numbers into any text field SOLELY on this view
+ * Input: User touch
+ * Output: None
+ * Properties Modified: None
+ */
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [_idIn resignFirstResponder];
 }
