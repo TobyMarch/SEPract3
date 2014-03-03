@@ -17,7 +17,7 @@
 
 
 @interface PersonList : NSObject{
-/// initialize NSMutableArray to hold Person objects
+/// declare NSMutableArray to hold Person objects
     NSMutableArray *list;
 }
 
@@ -29,7 +29,6 @@
 - (BOOL) removePerson: (int) IDin;
 - (BOOL) findPerson: (int) IDin;
 - (id) returnPerson: (int) IDin;
-- (BOOL) printList;
 
 
 
