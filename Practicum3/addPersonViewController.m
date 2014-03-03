@@ -174,7 +174,7 @@
     }
 }
 
-/*
+/**
  *Purpose: Hides the keyboards of the text fields on the current view whenever a user touches anywhere outside the keyboard when entering text/numbers into any text field SOLELY on this view
  * Input: User touch
  * Output: None
