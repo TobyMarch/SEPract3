@@ -1,4 +1,4 @@
-//
+///
 /// ViewController.m
 /// Practicum3
 /// .m file for the Main Menu view
@@ -15,42 +15,21 @@
 
 @implementation ViewController
 
+/**
+ * Function: viewDidLoad:
+ * Purpose: Runs once view is loaded into memory, Initializes singleton list
+ * Input:
+ *      none
+ * Output:
+ *      none
+ * Properties Modified:
+ *      sharedList
+ */
 - (void)viewDidLoad{
-    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    /*
-        This is test code I to display info in the tableView
-        Will create a new PersonList and add to the Singleton
-     
-     */
-    
     PersonList *newList = [[PersonList alloc] init];
-    Student *newPerson = [Student alloc];
-    newPerson = [newPerson initWithfName:@"Calvin" andlName:@"Chestnut" andID:701136956];
-    [[newList list] insertObject:newPerson atIndex:0];
-    
-    Student *secondPerson = [Student alloc];
-    secondPerson = [secondPerson initWithfName:@"Toby" andlName:@"March" andID:700843602];
-    [secondPerson setGpa:3.6];
-    [secondPerson setGradYear:2014];
-    [secondPerson setMajor:@"Computer Science"];
-    [[newList list] insertObject:secondPerson atIndex:0];
-    
-    Professor *thirdPerson = [Professor alloc];
-    thirdPerson = [thirdPerson initWithfName:@"John" andlName:@"Barr" andID:400000001];
-    [thirdPerson setSalary:10000.0];
-    [thirdPerson setDepartment:@"Computer Science"];
-    [[newList list] insertObject:thirdPerson atIndex:0];
-    
-    
-    
-    /*
-    [[newList list] insertObject:[[Person alloc] initWithfName:@"Toby" andlName:@"March" andID:123456789] atIndex:0];
-    [[newList list] insertObject:[[Person alloc] initWithfName:@"Chris" andlName:@"Kindrat" andID:987654321] atIndex:0];
-    [[newList list] insertObject:[[Person alloc] initWithfName:@"John" andlName:@"Huttlinger" andID:234567890] atIndex:0];
-    */
     [[SEListSingleton sharedList] setList:newList];
      
 }
