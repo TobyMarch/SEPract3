@@ -60,7 +60,6 @@
  */
 - (IBAction)findPerson:(id)sender {
     int idValue = self.idIn.text.intValue;
-    
     //If an entry with that ID exists, create new DetailViewController to display information
     if(![self.idIn.text isEqualToString:@""]){
         if ([list findPerson:idValue]) {
@@ -69,11 +68,9 @@
             //Determine class of found entry
             NSString *entryClass = [NSString stringWithFormat:@"%@", [[list returnPerson:idValue] class]];
             if ([entryClass isEqualToString:@"Student"]) {
-                //self.informationLabel.text = @"Student Found!";
                 detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentDetail"];
             }
             else {
-                //self.informationLabel.text = @"Professor Found!";
                 detail = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfessorDetail"];
             }
             //Set title of new UIViewController to the id of the entry
