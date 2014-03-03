@@ -102,8 +102,6 @@
 
 
 - (IBAction)createPerson:(id)sender {
-    // Create object to be added to list
-    // (I'm hoping that there's a more elegant way to determine which child object is being created)
     BOOL added=NO;
     BOOL emptyField=NO;
     if (self.gradYearLabel.hidden == NO) {
