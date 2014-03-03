@@ -1,16 +1,16 @@
 //
-//  removePersonViewController.m
-//  TestSegues
-//
-//  Created by Chris Kondrat on 2/27/14.
-//  Copyright (c) 2014 Team Mojave All rights reserved.
-//
-// Manages the removePerson View based on users interaction with the window
-// This views code focuses primarily on retrieving user input from the text field named idInput
-// and removing the individual (should he/she exist in the list at the time) for the roster when
-// the UI Button on this scripts view in pressed down. The user is alerted with a pop-up message
-// on the success or failure of the removal process
-//
+///removePersonViewController.m
+///Practicum 3
+///Description: removePersonViewController class
+///Created by John Huttlinger
+///Partners: Chris Kondrat, TOby March, Calvin Chestnut
+///
+///Algorithim:
+///     Manages the removePerson View based on users interaction with the window
+///     This views code focuses primarily on retrieving user input from the text field named idInput
+///     and removing the individual (should he/she exist in the list at the time) for the roster when
+///     the UI Button on this scripts view in pressed down. The user is alerted with a pop-up message
+///
 
 #import "removePersonViewController.h"
 
@@ -42,17 +42,30 @@
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    [super didReceiveMemoryWarning];
 }
 
+/**Function: removePerson
+ * Purpose: Remove person with specified ID from list
+ * Input:
+        UIButton* sender - button action
+ * Output:
+        none
+ * Properties modifed:
+        list
+ */
 - (IBAction)removePerson:(UIButton *)sender {
+/// initialize alert
     UIAlertView *result = [UIAlertView alloc];
+/// attempt to remove person with specifed ID
     if([_list removePerson:self.idInput.text.intValue]){
+///     show success alert
         result = [result initWithTitle:@"Success!" message:@"Person successfully removed" delegate:self cancelButtonTitle:@"Great!" otherButtonTitles:nil, nil];
         [result show];
     }
     else{
+///     show failure alert
         result = [result initWithTitle:@"Failed" message:@"No person with that ID found" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
         [result show];
     }
