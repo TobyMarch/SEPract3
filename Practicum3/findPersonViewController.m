@@ -84,9 +84,9 @@
             [errorAlert show];
         }
     }
-    else{
-        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Invalid Input" message:@"You must enter an ID" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [errorAlert show];
+    else {
+        UIAlertView *failed = [[UIAlertView alloc] initWithTitle:@"Find Failed" message:@"No person with that ID found" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [failed show];
     }
 }
 

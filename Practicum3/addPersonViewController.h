@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SEListSingleton.h"
-@interface addPersonViewController : UIViewController <UIAlertViewDelegate>
+@interface addPersonViewController : UIViewController
 
 //Properties hinging on the Person class
 @property (weak, nonatomic) IBOutlet UITextField *firstName; //Text Field which holds Persons First Name
@@ -50,6 +50,7 @@
 
 //Methods
 - (IBAction)sliderChange:(UISlider *)sender;
+- (IBAction)textChanged:(UITextField *)sender;
 - (IBAction)toggleType:(UISegmentedControl *)sender;
 - (IBAction)createPerson:(id)sender;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
