@@ -1,11 +1,16 @@
-//
-//  PersonList.m
-//  Purpose: Manage a NSMutable Array object that stores students/professors.
-//  Created by John Huttlinger
-//  Edited by Matthew Kercher on 2/9/14, 2/13/14
-//      - Refactored for Objective-C, changed from linked list to NSMutableArray
-//      - Removed getHead function.
-//
+///
+///Person.h
+///Practicum 3
+///Description: Header file for PersonList class
+///Created by John Huttlinger
+///Refactored by John Huttlinger
+///Partners: Chris Kondrat, Toby March, Calvin Chestnut
+///
+///Modifications:
+///     Removed useless method. Replaced with two new methods.
+///Algorithim:
+///     Manages list of Person objects
+///
 
 #import "PersonList.h"
 #import "Professor.h"

@@ -9,7 +9,7 @@
 ///Modifications:
 ///     Removed useless method. Replaced with two new methods.
 ///Algorithim:
-///
+///     Manages list of Person objects
 ///
 
 #import <Foundation/Foundation.h>
