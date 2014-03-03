@@ -1,40 +1,43 @@
-//
-//  Professor.cpp
-//  Practicum 1
-//
-//  Created by Calvin Chestnut
-//  Partners: Toby March, Chris Kondrat, John Huttlinger
-//
-//
-//  This file impliments the methods defined in Professor.h
-//
-//
+///
+///Person.h
+///Practicum 3
+///Description: Header file for Professor class
+///Created by Calvin Chestnut
+///Refractored by John Huttlinger
+///Partners: John Huttlinger, Toby March, Calvin Chestnut
+///
+///Modifications:
+///     Removed unused method. Removed unused variables. Modified constructor
+///Algorithim:
+///
+///
 
-//Includes declarations made in Professor.h
 #import "Professor.h"
 
 @implementation Professor
 @synthesize tenure, salary, department;
-/*
- method: Professor Constructor
- purpose: Create an instance of a Professor object
- parameters:
- string firstIn - Passed to Person constructor to be set as firstName
- string lastIn - Passed to Person constructor to be set as lastName
- int idIn - Passed to Person constructor to be set as id
- return value: none
- properties modified-
- Professor object is created
- precondition: none
- notes:
- bool tenure set to default value
- no other Professor specific attributes set initially
- */
 
+
+/** Function: initWithFirstName
+ * Purpose: Constructor
+ * Input:
+        NNString* firstNameIn - First name
+        NSString* lastNameIn - Last name
+        int IDin - ID number
+        BOOL tenuredIn - Tenure status
+        double salaryIn - Salary
+        NSString* deptIn - Department
+ * Output:
+        id self - instance of Professor class
+ * Properties modified:
+        salary = salaryIn
+        department = deptIn
+        tenure = tenuredIn
+ */
 - (id) initWithFirstName: (NSString *) firstNameIn andLastName: (NSString *) lastNameIn andID: (int) IDin andTenured: (BOOL) tenuredIn andSalary:(double)salaryIn andDept:(NSString *)deptIn{
-    
-    
+    //call super class constructor
     if (self = [super initWithfName:firstNameIn andlName:lastNameIn andID:IDin]) {
+        //set properties to inputs
         salary = salaryIn;
         department = deptIn;
         tenure = tenuredIn;
