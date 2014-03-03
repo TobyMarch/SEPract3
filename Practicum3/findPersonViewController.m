@@ -62,27 +62,34 @@
     int idValue = self.idIn.text.intValue;
     
     //If an entry with that ID exists, create new DetailViewController to display information
-    if ([list findPerson:idValue]) {
-        //Create new UIViewController to display entry details
-        UIViewController *detail;
-        //Determine class of found entry
-        NSString *entryClass = [NSString stringWithFormat:@"%@", [[list returnPerson:idValue] class]];
-        if ([entryClass isEqualToString:@"Student"]) {
-            self.informationLabel.text = @"Student Found!";
-            detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentDetail"];
+    if(![self.idIn.text isEqualToString:@""]){
+        if ([list findPerson:idValue]) {
+            //Create new UIViewController to display entry details
+            UIViewController *detail;
+            //Determine class of found entry
+            NSString *entryClass = [NSString stringWithFormat:@"%@", [[list returnPerson:idValue] class]];
+            if ([entryClass isEqualToString:@"Student"]) {
+                //self.informationLabel.text = @"Student Found!";
+                detail = [self.storyboard instantiateViewControllerWithIdentifier:@"StudentDetail"];
+            }
+            else {
+                //self.informationLabel.text = @"Professor Found!";
+                detail = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfessorDetail"];
+            }
+            //Set title of new UIViewController to the id of the entry
+            NSString *title = [NSString stringWithFormat:@"%d",idValue];
+            detail.title = title;
+            //Push UIViewController
+            [self.navigationController pushViewController:detail animated:YES];
         }
         else {
-            self.informationLabel.text = @"Professor Found!";
-            detail = [self.storyboard instantiateViewControllerWithIdentifier:@"ProfessorDetail"];
+            UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Person Not Found" message:@"No person with that ID" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [errorAlert show];
         }
-        //Set title of new UIViewController to the id of the entry
-        NSString *title = [NSString stringWithFormat:@"%d",idValue];
-        detail.title = title;
-        //Push UIViewController
-        [self.navigationController pushViewController:detail animated:YES];
     }
-    else {
-        self.informationLabel.text = @"Person Not Found!";
+    else{
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Invalid Input" message:@"You must enter an ID" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [errorAlert show];
     }
 }
 

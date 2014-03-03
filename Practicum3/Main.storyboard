@@ -237,7 +237,7 @@
                                     <action selector="findPerson:" destination="wd6-Yg-YSi" eventType="touchUpInside" id="1OJ-jr-a9G"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Placeholder for Persons information" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="175" translatesAutoresizingMaskIntoConstraints="NO" id="90O-qq-uZu">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="175" translatesAutoresizingMaskIntoConstraints="NO" id="90O-qq-uZu">
                                 <rect key="frame" x="69" y="297" width="175" height="134"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="134" id="2Lk-Wc-rGl"/>
