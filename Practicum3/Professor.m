@@ -1,7 +1,7 @@
 ///
 ///Person.h
 ///Practicum 3
-///Description: Header file for Professor class
+///Description: Professor class
 ///Created by Calvin Chestnut
 ///Refractored by John Huttlinger
 ///Partners: John Huttlinger, Toby March, Calvin Chestnut
