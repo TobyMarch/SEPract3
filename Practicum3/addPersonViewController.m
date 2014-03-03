@@ -30,10 +30,12 @@
     return self;
 }
 
-//Purpose:              Makes sure that the List object is always available on load
-//Input:                none
-//Output:               none
-//Properties Modified:  list
+/**
+ * Purpose:              Makes sure that the List object is always available on load
+ * Input:                none
+ * Output:               none
+ * Properties Modified:  list
+ */
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.list = [[SEListSingleton sharedList] getList];
@@ -51,20 +53,25 @@
     // Dispose of any resources that can be recreated.
 }
 
-//Purpose: Informs the user of what value the current slider position is
-//Input: Slider position
-//Output: Outputs value into the text field called sliderValue (located beneath the slider )
-//Properties Modified: sliderValue's text field
+/**
+ * Purpose: Informs the user of what value the current slider position is
+ * Input: Slider position
+ * Output: Outputs value into the text field called sliderValue (located beneath the slider )
+ * Properties Modified: sliderValue's text field
+ */
 - (IBAction)sliderChange:(UISlider *)sender {
         double value = sender.value;
         self.sliderValue.text = [NSString stringWithFormat:@"%.1f", value];
 
 }
 
-//Purpose: Hides and Shows certain labels and text boxes based on which object you are creating
-//Input: Position of the Segmented Controller
-//Output: Shows/Hides certain UI components based on the Segmented Controllers position
-//Properties Modified: All labels that pertain to either a student or a professor, UI slider values, show/hidden status of all objects pertaining to students or professors
+/**
+ * Purpose: Hides and Shows certain labels and text boxes based on which object you are creating
+ * Input: Position of the Segmented Controller
+ * Output: Shows/Hides certain UI components based on the Segmented Controllers position
+ * Properties Modified: All labels that pertain to either a student or a professor, UI slider values, show/hidden status of all objects pertaining to students or professors
+ */
+
 - (IBAction)toggleType:(UISegmentedControl* )sender {
     if(sender.selectedSegmentIndex == 0){
         self.graduationYear.hidden = NO;
@@ -100,7 +107,12 @@
     }
 }
 
-
+/**
+ * Purpose: Creates a person to be added to the list
+ * Input: First Name, Last Name and ID number for both Professor and Student. Graduation Year, Major and GPA for Students. Salary, Tenure Status and Department for Professors.
+ * Output: A Person object that is either a Professor or a Student that is added to the list
+ * Properties Modified: None
+ */
 - (IBAction)createPerson:(id)sender {
     BOOL added=NO;
     BOOL emptyField=NO;
@@ -138,21 +150,24 @@
     
 }
 
-//Purpose: Dismisses view when alert is responded to
-//Input: buttonIndex, alertViewPressed
-//Output: none
-//Properties modified: dismisses current ViewController
+/**
+ * Purpose: Dismisses view when alert is responded to
+ * Input: buttonIndex, alertViewPressed
+ * Output: none
+ * Properties modified: dismisses current ViewController
+ */
 -(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if ([alertView.title isEqualToString:@"Added Person"]){
         [self.navigationController popToRootViewControllerAnimated:YES];
     }
 }
 
-//Purpose: Hides the keyboards of the text fields on the current view whenever a user touches anywhere outside the keyboard
-//when entering text/numbers into any text field SOLELY on this view
-//Input: User touch
-//Output: None
-//Properties Modified: None
+/*
+ *Purpose: Hides the keyboards of the text fields on the current view whenever a user touches anywhere outside the keyboard when entering text/numbers into any text field SOLELY on this view
+ * Input: User touch
+ * Output: None
+ * Properties Modified: None
+ */
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [_firstName resignFirstResponder];
     [_lastName resignFirstResponder];

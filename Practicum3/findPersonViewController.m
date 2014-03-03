@@ -29,10 +29,12 @@
     return self;
 }
 
-//Purpose:              Makes sure that the List object is always available on load
-//Input:                none
-//Output:               none
-//Properties Modified:  list
+/**
+ * Purpose:              Makes sure that the List object is always available on load
+ * Input:                none
+ * Output:               none
+ * Properties Modified:  list
+ */
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     self.list = [[SEListSingleton sharedList] getList];
@@ -50,10 +52,12 @@
 }
 
 
-//Purpose: Finds a Persons information based on user inputted ID Number
-//Input: ID Number in the idIn TextField
-//Output: Person information into informationLabel Label
-//Properties Modified: None
+/**
+ * Purpose: Finds a Persons information based on user inputted ID Number
+ * Input: ID Number in the idIn TextField
+ * Output: Person information into informationLabel Label
+ * Properties Modified: None
+ */
 - (IBAction)findPerson:(id)sender {
     int idValue = self.idIn.text.intValue;
     
@@ -83,11 +87,13 @@
 }
 
 
-//Purpose: Hides the keyboards of the text fields on the current view whenever a user touches anywhere outside the keyboard
-//when entering text/numbers into any text field SOLELY on this view
-//Input: User touch
-//Output: None
-//Properties Modified: None
+/**
+ * Purpose: Hides the keyboards of the text fields on the current view whenever a user touches anywhere outside the keyboard when entering text/numbers into any text field SOLELY on this view
+ * Input: User touch
+ * Output: None
+ * Properties Modified: None
+ */
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [_idIn resignFirstResponder];
 }
