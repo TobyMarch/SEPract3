@@ -15,6 +15,7 @@
 
 
 #import "modifyPersonViewController.h"
+#import "ModifyDataViewController.h"
 
 @interface modifyPersonViewController ()
 
@@ -64,10 +65,16 @@
     if ([list findPerson:idValue]) {
         //Should check before pushing the modal view
         //After check, returnPerson from PersonList, and populate the modify Modal
+        ModifyDataViewController *modify = [self.storyboard instantiateViewControllerWithIdentifier:@"modifyData"];
+        [modify setTitle:self.idIn.text];
+        
+        [self.navigationController pushViewController:modify animated:YES];
         
     }
     else {
         //Error message here
+        UIAlertView *error = [[UIAlertView alloc] initWithTitle:@"Failed" message:@"No Person found with that ID" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+        [error show];
     }
 }
 

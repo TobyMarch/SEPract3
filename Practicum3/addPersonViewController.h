@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SEListSingleton.h"
-@interface addPersonViewController : UIViewController <UIAlertViewDelegate>
+@interface addPersonViewController : UIViewController
 
 //Properties hinging on the Person class
 @property (weak, nonatomic) IBOutlet UITextField *firstName; //Text Field which holds Persons First Name
